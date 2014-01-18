@@ -405,7 +405,7 @@
               <table id="attribute" class="table table-striped table-bordered table-hover">
                 <thead>
                   <tr>
-                    <td class="text-left"><?php echo $entry_attribute; ?></td>
+                    <td class="text-left" style="min-width:200px"><?php echo $entry_attribute; ?></td>
                     <td class="text-left"><?php echo $entry_text; ?></td>
                     <td></td>
                   </tr>
