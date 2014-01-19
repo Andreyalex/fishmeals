@@ -276,7 +276,8 @@ div.required .control-label:before {
 /* footer */
 footer {
 	margin-top: 30px;
-	padding-top: 30px;
+	padding-top: 20px;
+    padding-bottom: 10px;
 	background-color: #303030;
 	border-top: 1px solid #ddd;
 	color: #e2e2e2;
@@ -603,7 +604,7 @@ h2.price {
 	text-transform: uppercase;
 }
 .product-thumb .button-group button + button {
-	width: 20%;
+	width: 40%;
 	border-left: 1px solid #ddd;
 }
 .product-thumb .button-group button:hover {
