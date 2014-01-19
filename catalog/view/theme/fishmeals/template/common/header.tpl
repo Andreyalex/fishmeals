@@ -42,13 +42,19 @@
 <body class="<?php echo $class; ?>">
 <nav id="top">
   <div class="container">
-    <div class="pull-left"><?php echo $language; ?></div>
-    <div id="top-links" class="pull-right">
-        <i class="fa fa-phone"></i><span>Телефоны:</span>&nbsp;&nbsp;&nbsp;
-        <i class="icon-cell-ks"></i><span>096-123-456-78</span>&nbsp;&nbsp;&nbsp;
-        <i class="icon-cell-life"></i><span>063-890-567-34</span>&nbsp;&nbsp;&nbsp;
-        <i class="icon-cell-mts"></i><span>050-456-324-12</span>
-        <a href="<?php echo $account; ?>"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span></a> <a href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a> <a href="<?php echo $shopping_cart; ?>"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_shopping_cart; ?></span></a> <a href="<?php echo $checkout; ?>"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_checkout; ?></span></a></div>
+<!--    <div class="pull-left">--><?php //echo $language; ?><!--</div>-->
+    <div id="top-links">
+        <div id="top-phones">
+            <i class="fa fa-phone"></i><span>Телефоны:</span>&nbsp;&nbsp;&nbsp;
+            <i class="icon-cell-ks"></i><span>096-123-456-78</span>&nbsp;&nbsp;&nbsp;
+            <i class="icon-cell-life"></i><span>063-890-567-34</span>&nbsp;&nbsp;&nbsp;
+            <i class="icon-cell-mts"></i><span>050-456-324-12</span>&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pull-right">
+            <a href="<?php echo $account; ?>"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span></a>
+            <a href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a>
+        </div>
+    </div>
   </div>
 </nav>
 <header>
