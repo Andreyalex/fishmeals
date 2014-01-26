@@ -6,7 +6,8 @@
     <td class="text-right"><?php echo $review['date_added']; ?></td>
   </tr>
   <tr>
-    <td colspan="2"><p><?php echo $review['text']; ?></p>
+    <td colspan="2">
+      <div class="text-description"><?php echo $review['text']; ?></div>
       <?php for ($i = 1; $i <= 5; $i++) { ?>
       <?php if ($review['rating'] < $i) { ?>
       <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>

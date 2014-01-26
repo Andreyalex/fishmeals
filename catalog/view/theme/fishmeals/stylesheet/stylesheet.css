@@ -700,3 +700,21 @@ h2.price {
 .review-layout .review {
     margin-bottom: 20px;
 }
+
+.image-tail {
+    border: 1px solid #dddddd;
+    display:inline-block;
+}
+
+.image-tail-small {
+    width: 32px;
+}
+
+.image-tail-medium {
+    width: 100px;
+}
+
+.text-description,
+.text-description * {
+    word-wrap:break-word;
+}
