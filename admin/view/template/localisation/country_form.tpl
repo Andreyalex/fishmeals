@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="name" value="<?php echo $name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
+            <input type="text" name="name" value="<?php echo $name; ?>"  id="input-name" class="form-control" />
             <?php if ($error_name) { ?>
             <div class="text-danger"><?php echo $error_name; ?></div>
             <?php } ?>
@@ -31,19 +31,19 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-iso-code-2"><?php echo $entry_iso_code_2; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="iso_code_2" value="<?php echo $iso_code_2; ?>" placeholder="<?php echo $entry_iso_code_2; ?>" id="input-iso-code-2" class="form-control" />
+            <input type="text" name="iso_code_2" value="<?php echo $iso_code_2; ?>"  id="input-iso-code-2" class="form-control" />
           </div>
         </div>
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-iso-code-3"><?php echo $entry_iso_code_3; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="iso_code_3" value="<?php echo $iso_code_3; ?>" placeholder="<?php echo $entry_iso_code_3; ?>" id="input-iso-code-3" class="form-control" />
+            <input type="text" name="iso_code_3" value="<?php echo $iso_code_3; ?>"  id="input-iso-code-3" class="form-control" />
           </div>
         </div>
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-address-format"><?php echo $entry_address_format; ?> </label>
           <div class="col-sm-10">
-            <textarea name="address_format" rows="5" placeholder="<?php echo $entry_address_format; ?>" id="input-address-format" class="form-control"><?php echo $address_format; ?></textarea>
+            <textarea name="address_format" rows="5"  id="input-address-format" class="form-control"><?php echo $address_format; ?></textarea>
             <span class="help-block"><?php echo $help_address_format; ?></span></div>
         </div>
         <div class="form-group">

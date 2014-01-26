@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-merchant"><?php echo $entry_merchant; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="authorizenet_sim_merchant" value="<?php echo $authorizenet_sim_merchant; ?>" placeholder="<?php echo $entry_merchant; ?>" id="input-merchant" class="form-control" />
+            <input type="text" name="authorizenet_sim_merchant" value="<?php echo $authorizenet_sim_merchant; ?>"  id="input-merchant" class="form-control" />
             <?php if ($error_merchant) { ?>
             <div class="text-danger"><?php echo $error_merchant; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-key"><?php echo $entry_key; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="authorizenet_sim_key" value="<?php echo $authorizenet_sim_key; ?>" placeholder="<?php echo $entry_key; ?>" id="input-key" class="form-control" />
+            <input type="text" name="authorizenet_sim_key" value="<?php echo $authorizenet_sim_key; ?>"  id="input-key" class="form-control" />
             <?php if ($error_key) { ?>
             <div class="text-danger"><?php echo $error_key; ?></div>
             <?php } ?>
@@ -47,7 +47,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-md5"><?php echo $entry_md5; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="authorizenet_sim_md5" value="<?php echo $authorizenet_sim_md5; ?>" placeholder="<?php echo $entry_md5; ?>" id="input-md5" class="form-control" />
+            <input type="text" name="authorizenet_sim_md5" value="<?php echo $authorizenet_sim_md5; ?>"  id="input-md5" class="form-control" />
             <span class="help-block"><?php echo $help_md5; ?></span>
           </div>
         </div>        
@@ -77,7 +77,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="authorizenet_sim_total" value="<?php echo $authorizenet_sim_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="authorizenet_sim_total" value="<?php echo $authorizenet_sim_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span>
           </div>
         </div>
@@ -127,7 +127,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="authorizenet_sim_sort_order" value="<?php echo $authorizenet_sim_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="authorizenet_sim_sort_order" value="<?php echo $authorizenet_sim_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

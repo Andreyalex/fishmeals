@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="name" value="<?php echo $name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
+            <input type="text" name="name" value="<?php echo $name; ?>"  id="input-name" class="form-control" />
             <?php if ($error_name) { ?>
             <div class="text-danger"><?php echo $error_name; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-code"><?php echo $entry_code; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="code" value="<?php echo $code; ?>" placeholder="<?php echo $entry_code; ?>" id="input-code" class="form-control" />
+            <input type="text" name="code" value="<?php echo $code; ?>"  id="input-code" class="form-control" />
             <?php if ($error_code) { ?>
             <div class="text-danger"><?php echo $error_code; ?></div>
             <?php } ?>
@@ -40,7 +40,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label required" for="input-locale"><?php echo $entry_locale; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="locale" value="<?php echo $locale; ?>" placeholder="<?php echo $entry_locale; ?>" id="input-locale" class="form-control" />
+            <input type="text" name="locale" value="<?php echo $locale; ?>"  id="input-locale" class="form-control" />
             <?php if ($error_locale) { ?>
             <div class="text-danger"><?php echo $error_locale; ?></div>
             <?php } ?>
@@ -49,7 +49,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-image"><?php echo $entry_image; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="image" value="<?php echo $image; ?>" placeholder="<?php echo $entry_image; ?>" id="input-image" class="form-control" />
+            <input type="text" name="image" value="<?php echo $image; ?>"  id="input-image" class="form-control" />
             <?php if ($error_image) { ?>
             <div class="text-danger"><?php echo $error_image; ?></div>
             <?php } ?>
@@ -58,7 +58,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-directory"><?php echo $entry_directory; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="directory" value="<?php echo $directory; ?>" placeholder="<?php echo $entry_directory; ?>" id="input-directory" class="form-control" />
+            <input type="text" name="directory" value="<?php echo $directory; ?>"  id="input-directory" class="form-control" />
             <?php if ($error_directory) { ?>
             <div class="text-danger"><?php echo $error_directory; ?></div>
             <?php } ?>
@@ -67,7 +67,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-filename"><?php echo $entry_filename; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="filename" value="<?php echo $filename; ?>" placeholder="<?php echo $entry_filename; ?>" id="input-filename" class="form-control" />
+            <input type="text" name="filename" value="<?php echo $filename; ?>"  id="input-filename" class="form-control" />
             <?php if ($error_filename) { ?>
             <div class="text-danger"><?php echo $error_filename; ?></div>
             <?php } ?>
@@ -90,7 +90,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="sort_order" value="<?php echo $sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

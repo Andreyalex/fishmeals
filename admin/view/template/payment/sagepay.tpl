@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-vendor"><?php echo $entry_vendor; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="sagepay_vendor" value="<?php echo $sagepay_vendor; ?>" placeholder="<?php echo $entry_vendor; ?>" id="input-vendor" class="form-control" />
+            <input type="text" name="sagepay_vendor" value="<?php echo $sagepay_vendor; ?>"  id="input-vendor" class="form-control" />
             <?php if ($error_vendor) { ?>
             <div class="text-danger"><?php echo $error_vendor; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-password"><?php echo $entry_password; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="sagepay_password" value="<?php echo $sagepay_password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+            <input type="text" name="sagepay_password" value="<?php echo $sagepay_password; ?>"  id="input-password" class="form-control" />
             <?php if ($error_password) { ?>
             <div class="text-danger"><?php echo $error_password; ?></div>
             <?php } ?>
@@ -84,7 +84,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="sagepay_total" value="<?php echo $sagepay_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="sagepay_total" value="<?php echo $sagepay_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
@@ -133,7 +133,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="sagepay_sort_order" value="<?php echo $sagepay_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="sagepay_sort_order" value="<?php echo $sagepay_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

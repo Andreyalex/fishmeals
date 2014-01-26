@@ -44,8 +44,8 @@
                   <?php } ?>
                   <?php } ?>
                 </select></td>
-              <td class="text-left"><input type="text" name="banner_module[<?php echo $module_row; ?>][width]" value="<?php echo $module['width']; ?>" placeholder="<?php echo $entry_width; ?>" class="form-control" />
-                <input type="text" name="banner_module[<?php echo $module_row; ?>][height]" value="<?php echo $module['height']; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+              <td class="text-left"><input type="text" name="banner_module[<?php echo $module_row; ?>][width]" value="<?php echo $module['width']; ?>"  class="form-control" />
+                <input type="text" name="banner_module[<?php echo $module_row; ?>][height]" value="<?php echo $module['height']; ?>"  class="form-control" />
                 <?php if (isset($error_dimension[$module_row])) { ?>
                 <div class="text-danger"><?php echo $error_dimension[$module_row]; ?></div>
                 <?php } ?></td>
@@ -89,7 +89,7 @@
                   <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
                   <?php } ?>
                 </select></td>
-              <td class="text-right"><input type="text" name="banner_module[<?php echo $module_row; ?>][sort_order]" value="<?php echo $module['sort_order']; ?>" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>
+              <td class="text-right"><input type="text" name="banner_module[<?php echo $module_row; ?>][sort_order]" value="<?php echo $module['sort_order']; ?>"  class="form-control" /></td>
               <td class="text-left"><button type="button" onclick="$('#module-row<?php echo $module_row; ?>').remove();" class="btn btn-danger"><i class="fa fa-minus-circle"></i> <?php echo $button_remove; ?></button></td>
             </tr>
             <?php $module_row++; ?>
@@ -116,7 +116,7 @@ function addModule() {
 	html += '    <option value="<?php echo $banner['banner_id']; ?>"><?php echo addslashes($banner['name']); ?></option>';
 	<?php } ?>
 	html += '  </select></td>';
-	html += '  <td class="text-left"><input type="text" name="banner_module[' + module_row + '][width]" value="" placeholder="<?php echo $entry_width; ?>" class="form-control" /> <input type="text" name="banner_module[' + module_row + '][height]" value="" placeholder="<?php echo $entry_height; ?>" class="form-control" /></td>'; 
+	html += '  <td class="text-left"><input type="text" name="banner_module[' + module_row + '][width]" value=""  class="form-control" /> <input type="text" name="banner_module[' + module_row + '][height]" value=""  class="form-control" /></td>';
 	html += '  <td class="text-left"><select name="banner_module[' + module_row + '][layout_id]" class="form-control">';
 	<?php foreach ($layouts as $layout) { ?>
 	html += '    <option value="<?php echo $layout['layout_id']; ?>"><?php echo addslashes($layout['name']); ?></option>';
@@ -132,7 +132,7 @@ function addModule() {
     html += '    <option value="1" selected="selected"><?php echo $text_enabled; ?></option>';
     html += '    <option value="0"><?php echo $text_disabled; ?></option>';
     html += '  </select></td>';
-	html += '  <td class="text-right"><input type="text" name="banner_module[' + module_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';
+	html += '  <td class="text-right"><input type="text" name="banner_module[' + module_row + '][sort_order]" value=""  class="form-control" /></td>';
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#module-row' + module_row + '\').remove();" class="btn btn-danger"><i class="fa fa-minus-circle"></i> <?php echo $button_remove; ?></button></td>';
 	html += '</tr>';
 	

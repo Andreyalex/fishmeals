@@ -24,7 +24,7 @@
           <div class="col-sm-10">
             <?php foreach ($languages as $language) { ?>
             <div class="input-group"><span class="input-group-addon"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /></span>
-              <input type="text" name="weight_class_description[<?php echo $language['language_id']; ?>][title]" value="<?php echo isset($weight_class_description[$language['language_id']]) ? $weight_class_description[$language['language_id']]['title'] : ''; ?>" placeholder="<?php echo $entry_title; ?>" class="form-control" />
+              <input type="text" name="weight_class_description[<?php echo $language['language_id']; ?>][title]" value="<?php echo isset($weight_class_description[$language['language_id']]) ? $weight_class_description[$language['language_id']]['title'] : ''; ?>"  class="form-control" />
             </div>
             <?php if (isset($error_title[$language['language_id']])) { ?>
             <div class="text-danger"><?php echo $error_title[$language['language_id']]; ?></div>
@@ -37,7 +37,7 @@
           <div class="col-sm-10">
             <?php foreach ($languages as $language) { ?>
             <div class="input-group"><span class="input-group-addon"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /></span>
-              <input type="text" name="weight_class_description[<?php echo $language['language_id']; ?>][unit]" value="<?php echo isset($weight_class_description[$language['language_id']]) ? $weight_class_description[$language['language_id']]['unit'] : ''; ?>" placeholder="<?php echo $entry_unit; ?>" class="form-control" />
+              <input type="text" name="weight_class_description[<?php echo $language['language_id']; ?>][unit]" value="<?php echo isset($weight_class_description[$language['language_id']]) ? $weight_class_description[$language['language_id']]['unit'] : ''; ?>"  class="form-control" />
             </div>
             <?php if (isset($error_unit[$language['language_id']])) { ?>
             <div class="text-danger"><?php echo $error_unit[$language['language_id']]; ?></div>
@@ -48,7 +48,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-value"><?php echo $entry_value; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="value" value="<?php echo $value; ?>" placeholder="<?php echo $entry_value; ?>" id="input-value" class="form-control" />
+            <input type="text" name="value" value="<?php echo $value; ?>"  id="input-value" class="form-control" />
             <span class="help-block"><?php echo $help_value; ?></span></div>
         </div>
       </form>

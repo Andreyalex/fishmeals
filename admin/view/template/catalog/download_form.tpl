@@ -24,7 +24,7 @@
           <div class="col-sm-10">
             <?php foreach ($languages as $language) { ?>
             <div class="input-group"> <span class="input-group-addon"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /></span>
-              <input type="text" name="download_description[<?php echo $language['language_id']; ?>][name]" value="<?php echo isset($download_description[$language['language_id']]) ? $download_description[$language['language_id']]['name'] : ''; ?>" placeholder="<?php echo $entry_name; ?>" class="form-control" />
+              <input type="text" name="download_description[<?php echo $language['language_id']; ?>][name]" value="<?php echo isset($download_description[$language['language_id']]) ? $download_description[$language['language_id']]['name'] : ''; ?>"  class="form-control" />
             </div>
             <?php if (isset($error_name[$language['language_id']])) { ?>
             <div class="text-danger"><?php echo $error_name[$language['language_id']]; ?></div>
@@ -36,7 +36,7 @@
           <label class="col-sm-2 control-label" for="input-filename"><?php echo $entry_filename; ?></label>
           <div class="col-sm-10">
             <div class="input-group">
-              <input type="text" name="filename" value="<?php echo $filename; ?>" placeholder="<?php echo $entry_filename; ?>" id="input-filename" class="form-control" />
+              <input type="text" name="filename" value="<?php echo $filename; ?>"  id="input-filename" class="form-control" />
               <span class="input-group-btn">
               <button type="button" id="button-upload" class="btn btn-primary"><i class="fa fa-upload"></i> <?php echo $button_upload; ?></button>
               </span></div>
@@ -49,7 +49,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-mask"><?php echo $entry_mask; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="mask" value="<?php echo $mask; ?>" placeholder="<?php echo $entry_mask; ?>" id="input-mask" class="form-control" />
+            <input type="text" name="mask" value="<?php echo $mask; ?>"  id="input-mask" class="form-control" />
             <span class="help-block"><?php echo $help_mask; ?></span>
             <?php if ($error_mask) { ?>
             <div class="text-danger"><?php echo $error_mask; ?></div>

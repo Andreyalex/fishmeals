@@ -22,13 +22,13 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="handling_total" value="<?php echo $handling_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="handling_total" value="<?php echo $handling_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-fee"><?php echo $entry_fee; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="handling_fee" value="<?php echo $handling_fee; ?>" placeholder="<?php echo $entry_fee; ?>" id="input-fee" class="form-control" />
+            <input type="text" name="handling_fee" value="<?php echo $handling_fee; ?>"  id="input-fee" class="form-control" />
           </div>
         </div>
         <div class="form-group">
@@ -63,7 +63,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="handling_sort_order" value="<?php echo $handling_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="handling_sort_order" value="<?php echo $handling_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

@@ -22,7 +22,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-rate"><?php echo $entry_rate; ?></label>
           <div class="col-sm-10">
-            <textarea name="citylink_rate" rows="5" placeholder="<?php echo $entry_rate; ?>" id="input-rate" class="form-control"><?php echo $citylink_rate; ?></textarea>
+            <textarea name="citylink_rate" rows="5"  id="input-rate" class="form-control"><?php echo $citylink_rate; ?></textarea>
             <span class="help-block"><?php echo $help_rate; ?></span> </div>
         </div>
         <div class="form-group">
@@ -72,7 +72,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="citylink_sort_order" value="<?php echo $citylink_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="citylink_sort_order" value="<?php echo $citylink_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

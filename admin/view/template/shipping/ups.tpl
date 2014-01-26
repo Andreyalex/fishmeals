@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-key"><?php echo $entry_key; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="ups_key" value="<?php echo $ups_key; ?>" placeholder="<?php echo $entry_key; ?>" id="input-key" class="form-control" />
+            <input type="text" name="ups_key" value="<?php echo $ups_key; ?>"  id="input-key" class="form-control" />
             <span class="help-block"><?php echo $help_key; ?></span>
             <?php if ($error_key) { ?>
             <div class="text-danger"><?php echo $error_key; ?></div>
@@ -32,7 +32,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-username"><?php echo $entry_username; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="ups_username" value="<?php echo $ups_username; ?>" placeholder="<?php echo $entry_username; ?>" id="input-username" class="form-control" />
+            <input type="text" name="ups_username" value="<?php echo $ups_username; ?>"  id="input-username" class="form-control" />
             <span class="help-block"><?php echo $help_username; ?></span>
             <?php if ($error_username) { ?>
             <div class="text-danger"><?php echo $error_username; ?></div>
@@ -42,7 +42,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-password"><?php echo $entry_password; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="ups_password" value="<?php echo $ups_password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+            <input type="text" name="ups_password" value="<?php echo $ups_password; ?>"  id="input-password" class="form-control" />
             <span class="help-block"><?php echo $help_password; ?></span>
             <?php if ($error_password) { ?>
             <div class="text-danger"><?php echo $error_password; ?></div>
@@ -108,7 +108,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-city"><?php echo $entry_city; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="ups_city" value="<?php echo $ups_city; ?>" placeholder="<?php echo $entry_city; ?>" id="input-city" class="form-control" />
+            <input type="text" name="ups_city" value="<?php echo $ups_city; ?>"  id="input-city" class="form-control" />
             <span class="help-block"><?php echo $help_city; ?></span>
             <?php if ($error_city) { ?>
             <div class="text-danger"><?php echo $error_city; ?></div>
@@ -118,7 +118,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-state"><?php echo $entry_state; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="ups_state" value="<?php echo $ups_state; ?>" placeholder="<?php echo $entry_state; ?>" id="input-state" class="form-control" maxlength="2" />
+            <input type="text" name="ups_state" value="<?php echo $ups_state; ?>"  id="input-state" class="form-control" maxlength="2" />
             <span class="help-block"><?php echo $help_state; ?></span>
             <?php if ($error_state) { ?>
             <div class="text-danger"><?php echo $error_state; ?></div>
@@ -128,7 +128,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-country"><?php echo $entry_country; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="ups_country" value="<?php echo $ups_country; ?>" placeholder="<?php echo $entry_country; ?>" id="input-country" class="form-control" maxlength="2" />
+            <input type="text" name="ups_country" value="<?php echo $ups_country; ?>"  id="input-country" class="form-control" maxlength="2" />
             <span class="help-block"><?php echo $help_country; ?></span>
             <?php if ($error_country) { ?>
             <div class="text-danger"><?php echo $error_country; ?></div>
@@ -138,7 +138,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-postcode"><?php echo $entry_postcode; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="ups_postcode" value="<?php echo $ups_postcode; ?>" placeholder="<?php echo $entry_postcode; ?>" id="input-postcode" class="form-control" />
+            <input type="text" name="ups_postcode" value="<?php echo $ups_postcode; ?>"  id="input-postcode" class="form-control" />
             <span class="help-block"><?php echo $help_postcode; ?></span> </div>
         </div>
         <div class="form-group">
@@ -815,13 +815,13 @@
           <div class="col-sm-10">
             <div class="row">
               <div class="col-sm-4">
-                <input type="text" name="ups_length" value="<?php echo $ups_length; ?>" placeholder="<?php echo $entry_length; ?>" id="input-length" class="form-control" />
+                <input type="text" name="ups_length" value="<?php echo $ups_length; ?>"  id="input-length" class="form-control" />
               </div>
               <div class="col-sm-4">
-                <input type="text" name="ups_width" value="<?php echo $ups_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-width" class="form-control" />
+                <input type="text" name="ups_width" value="<?php echo $ups_width; ?>"  id="input-width" class="form-control" />
               </div>
               <div class="col-sm-4">
-                <input type="text" name="ups_height" value="<?php echo $ups_height; ?>" placeholder="<?php echo $entry_height; ?>" id="input-height" class="form-control" />
+                <input type="text" name="ups_height" value="<?php echo $ups_height; ?>"  id="input-height" class="form-control" />
               </div>
             </div>
             <span class="help-block"><?php echo $help_dimension; ?></span>
@@ -877,7 +877,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="ups_sort_order" value="<?php echo $ups_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="ups_sort_order" value="<?php echo $ups_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
         <div class="form-group">

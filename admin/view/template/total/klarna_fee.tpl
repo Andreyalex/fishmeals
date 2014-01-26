@@ -30,13 +30,13 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-total<?php echo $country['code']; ?>"><?php echo $entry_total ?></label>
               <div class="col-sm-10">
-                <input type="text" name="klarna_fee[<?php echo $country['code']; ?>][total]" value="<?php echo isset($klarna_fee[$country['code']]) ? $klarna_fee[$country['code']]['total'] : ''; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total<?php echo $country['code']; ?>" class="form-control" />
+                <input type="text" name="klarna_fee[<?php echo $country['code']; ?>][total]" value="<?php echo isset($klarna_fee[$country['code']]) ? $klarna_fee[$country['code']]['total'] : ''; ?>"  id="input-total<?php echo $country['code']; ?>" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-fee<?php echo $country['code']; ?>"><?php echo $entry_fee ?></label>
               <div class="col-sm-10">
-                <input type="text" name="klarna_fee[<?php echo $country['code']; ?>][fee]" value="<?php echo isset($klarna_fee[$country['code']]) ? $klarna_fee[$country['code']]['fee'] : ''; ?>" placeholder="<?php echo $entry_fee; ?>" id="input-fee<?php echo $country['code']; ?>" class="form-control" />
+                <input type="text" name="klarna_fee[<?php echo $country['code']; ?>][fee]" value="<?php echo isset($klarna_fee[$country['code']]) ? $klarna_fee[$country['code']]['fee'] : ''; ?>"  id="input-fee<?php echo $country['code']; ?>" class="form-control" />
               </div>
             </div>
             <div class="form-group">
@@ -71,7 +71,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-sort-order<?php echo $country['code']; ?>"><?php echo $entry_sort_order; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="klarna_fee[<?php echo $country['code']; ?>][sort_order]" value="<?php echo isset($klarna_fee[$country['code']]) ? $klarna_fee[$country['code']]['sort_order'] : ''; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order<?php echo $country['code']; ?>" class="form-control" />
+                <input type="text" name="klarna_fee[<?php echo $country['code']; ?>][sort_order]" value="<?php echo isset($klarna_fee[$country['code']]) ? $klarna_fee[$country['code']]['sort_order'] : ''; ?>"  id="input-sort-order<?php echo $country['code']; ?>" class="form-control" />
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-account"><?php echo $entry_account; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="twocheckout_account" value="<?php echo $twocheckout_account; ?>" placeholder="<?php echo $entry_account; ?>" id="input-account" class="form-control" />
+            <input type="text" name="twocheckout_account" value="<?php echo $twocheckout_account; ?>"  id="input-account" class="form-control" />
             <?php if ($error_account) { ?>
             <div class="text-danger"><?php echo $error_account; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-secret"><?php echo $entry_secret; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="twocheckout_secret" value="<?php echo $twocheckout_secret; ?>" placeholder="<?php echo $entry_secret; ?>" id="input-secret" class="form-control" />
+            <input type="text" name="twocheckout_secret" value="<?php echo $twocheckout_secret; ?>"  id="input-secret" class="form-control" />
             <span class="help-block"><?php echo $help_secret; ?></span>
             <?php if ($error_secret) { ?>
             <div class="text-danger"><?php echo $error_secret; ?></div>
@@ -87,7 +87,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?> </label>
           <div class="col-sm-10">
-            <input type="text" name="twocheckout_total" value="<?php echo $twocheckout_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="twocheckout_total" value="<?php echo $twocheckout_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
@@ -136,7 +136,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="twocheckout_sort_order" value="<?php echo $twocheckout_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="twocheckout_sort_order" value="<?php echo $twocheckout_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

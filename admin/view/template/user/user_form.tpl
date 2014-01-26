@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-username"><?php echo $entry_username; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="username" value="<?php echo $username; ?>" placeholder="<?php echo $entry_username; ?>" id="input-username" class="form-control" />
+            <input type="text" name="username" value="<?php echo $username; ?>"  id="input-username" class="form-control" />
             <?php if ($error_username) { ?>
             <div class="text-danger"><?php echo $error_username; ?></div>
             <?php } ?>
@@ -45,7 +45,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-firstname"><?php echo $entry_firstname; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="<?php echo $entry_firstname; ?>" id="input-firstname" class="form-control" />
+            <input type="text" name="firstname" value="<?php echo $firstname; ?>"  id="input-firstname" class="form-control" />
             <?php if ($error_firstname) { ?>
             <div class="text-danger"><?php echo $error_firstname; ?></div>
             <?php } ?>
@@ -54,7 +54,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-lastname"><?php echo $entry_lastname; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
+            <input type="text" name="lastname" value="<?php echo $lastname; ?>"  id="input-lastname" class="form-control" />
             <?php if ($error_lastname) { ?>
             <div class="text-danger"><?php echo $error_lastname; ?></div>
             <?php } ?>
@@ -63,7 +63,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+            <input type="text" name="email" value="<?php echo $email; ?>"  id="input-email" class="form-control" />
           </div>
         </div>
         <div class="form-group">
@@ -80,7 +80,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-password"><?php echo $entry_password; ?></label>
           <div class="col-sm-10">
-            <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" autocomplete="off" />
+            <input type="password" name="password" value="<?php echo $password; ?>"  id="input-password" class="form-control" autocomplete="off" />
             <?php if ($error_password) { ?>
             <div class="text-danger"><?php echo $error_password; ?></div>
             <?php  } ?>
@@ -89,7 +89,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-confirm"><?php echo $entry_confirm; ?></label>
           <div class="col-sm-10">
-            <input type="password" name="confirm" value="<?php echo $confirm; ?>" placeholder="<?php echo $entry_confirm; ?>" id="input-confirm" class="form-control" />
+            <input type="password" name="confirm" value="<?php echo $confirm; ?>"  id="input-confirm" class="form-control" />
             <?php if ($error_confirm) { ?>
             <div class="text-danger"><?php echo $error_confirm; ?></div>
             <?php  } ?>

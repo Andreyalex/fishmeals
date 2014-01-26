@@ -24,8 +24,8 @@
                         <tr>
                             <td><?php echo $entry_date; ?></td>
                             <td>
-                                <input type="text" id="date_start" name="date_start" value="<?php echo $date_start; ?>" size="12" class="date" placeholder="<?php echo $entry_date_start; ?>" />
-                                &nbsp;&nbsp;<?php echo $entry_date_to; ?>&nbsp;&nbsp;<input type="text" name="date_end" size="12" class="date" placeholder="<?php echo $entry_date_end; ?>" />
+                                <input type="text" id="date_start" name="date_start" value="<?php echo $date_start; ?>" size="12" class="date"  />
+                                &nbsp;&nbsp;<?php echo $entry_date_to; ?>&nbsp;&nbsp;<input type="text" name="date_end" size="12" class="date"  />
                             </td>
                         </tr>
                         <tr>
@@ -68,8 +68,8 @@
                         <tr>
                             <td><?php echo $entry_email; ?></td>
                             <td>
-                                <input maxlength="127" type="text" name="buyer_email" value="" placeholder="<?php echo $entry_email_buyer; ?>" />&nbsp;&nbsp;
-                                <input maxlength="127" type="text" name="merchant_email" value="" placeholder="<?php echo $entry_email_merchant; ?>" />
+                                <input maxlength="127" type="text" name="buyer_email" value=""  />&nbsp;&nbsp;
+                                <input maxlength="127" type="text" name="merchant_email" value=""  />
                             </td>
                         </tr>
                         <tr>
@@ -111,11 +111,11 @@
                         <tr>
                             <td><?php echo $text_name; ?></td>
                             <td>
-                                <input type="text" name="name_salutation" value="" placeholder="<?php echo $entry_salutation; ?>" />&nbsp;&nbsp;
-                                <input type="text" name="name_first" value="" placeholder="<?php echo $entry_firstname; ?>" />&nbsp;&nbsp;
-                                <input type="text" name="name_middle" value="" placeholder="<?php echo $entry_middlename; ?>" />&nbsp;&nbsp;
-                                <input type="text" name="name_last" value="" placeholder="<?php echo $entry_lastname; ?>" />
-                                <input type="text" name="name_suffix" value="" placeholder="<?php echo $entry_suffix; ?>" />
+                                <input type="text" name="name_salutation" value=""  />&nbsp;&nbsp;
+                                <input type="text" name="name_first" value=""  />&nbsp;&nbsp;
+                                <input type="text" name="name_middle" value=""  />&nbsp;&nbsp;
+                                <input type="text" name="name_last" value=""  />
+                                <input type="text" name="name_suffix" value=""  />
                             </td>
                         </tr>
                     </table>

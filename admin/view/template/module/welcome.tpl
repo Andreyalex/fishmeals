@@ -46,7 +46,7 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-description<?php echo $module_row; ?>-language<?php echo $language['language_id']; ?>"><?php echo $entry_description; ?></label>
                       <div class="col-sm-10">
-                        <textarea name="welcome_module[<?php echo $module_row; ?>][description][<?php echo $language['language_id']; ?>]" placeholder="<?php echo $entry_description; ?>" id="input-description<?php echo $module_row; ?>-language<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($module['description'][$language['language_id']]) ? $module['description'][$language['language_id']] : ''; ?></textarea>
+                        <textarea name="welcome_module[<?php echo $module_row; ?>][description][<?php echo $language['language_id']; ?>]"  id="input-description<?php echo $module_row; ?>-language<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($module['description'][$language['language_id']]) ? $module['description'][$language['language_id']] : ''; ?></textarea>
                       </div>
                     </div>
                   </div>
@@ -110,7 +110,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-sort-order<?php echo $module_row; ?>"><?php echo $entry_sort_order; ?></label>
                   <div class="col-sm-10">
-                    <input type="text" name="welcome_module[<?php echo $module_row; ?>][sort_order]" value="<?php echo $module['sort_order']; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order<?php echo $module_row; ?>" class="form-control" />
+                    <input type="text" name="welcome_module[<?php echo $module_row; ?>][sort_order]" value="<?php echo $module['sort_order']; ?>"  id="input-sort-order<?php echo $module_row; ?>" class="form-control" />
                   </div>
                 </div>
               </div>
@@ -151,7 +151,7 @@ function addModule() {
 	html += '    <div class="tab-pane" id="tab-module' + module_row + '-language<?php echo $language['language_id']; ?>">';
 	html += '      <div class="form-group">';
 	html += '        <label class="col-sm-2 control-label" for="input-description' + module_row + '-language<?php echo $language['language_id']; ?>"><?php echo $entry_description; ?></label>';
-	html += '        <div class="col-sm-10"><textarea name="welcome_module[' + module_row + '][description][<?php echo $language['language_id']; ?>]" placeholder="<?php echo $entry_description; ?>" id="input-description' + module_row + '-language<?php echo $language['language_id']; ?>"></textarea></div>';
+	html += '        <div class="col-sm-10"><textarea name="welcome_module[' + module_row + '][description][<?php echo $language['language_id']; ?>]"  id="input-description' + module_row + '-language<?php echo $language['language_id']; ?>"></textarea></div>';
 	html += '      </div>'; 	
 	html += '    </div>';
 	<?php } ?>
@@ -185,7 +185,7 @@ function addModule() {
 	html += '  </div>';
 	html += '  <div class="form-group">';
 	html += '    <label class="col-sm-2 control-label" for="input-sort-order' + module_row + '"><?php echo $entry_sort_order; ?></label>';
-	html += '    <div class="col-sm-10"><input type="text" name="welcome_module[' + module_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order' + module_row + '" class="form-control" /></div>';
+	html += '    <div class="col-sm-10"><input type="text" name="welcome_module[' + module_row + '][sort_order]" value=""  id="input-sort-order' + module_row + '" class="form-control" /></div>';
 	html += '  </div>';
 	html += '</div>';
 	

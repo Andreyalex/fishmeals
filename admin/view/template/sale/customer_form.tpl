@@ -48,7 +48,7 @@
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-firstname"><?php echo $entry_firstname; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="<?php echo $entry_firstname; ?>" id="input-firstname" class="form-control" />
+                        <input type="text" name="firstname" value="<?php echo $firstname; ?>"  id="input-firstname" class="form-control" />
                         <?php if ($error_firstname) { ?>
                         <div class="text-danger"><?php echo $error_firstname; ?></div>
                         <?php } ?>
@@ -57,7 +57,7 @@
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-lastname"><?php echo $entry_lastname; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
+                        <input type="text" name="lastname" value="<?php echo $lastname; ?>"  id="input-lastname" class="form-control" />
                         <?php if ($error_lastname) { ?>
                         <div class="text-danger"><?php echo $error_lastname; ?></div>
                         <?php } ?>
@@ -66,7 +66,7 @@
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+                        <input type="text" name="email" value="<?php echo $email; ?>"  id="input-email" class="form-control" />
                         <?php if ($error_email) { ?>
                         <div class="text-danger"><?php echo $error_email; ?></div>
                         <?php  } ?>
@@ -75,7 +75,7 @@
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_telephone; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
+                        <input type="text" name="telephone" value="<?php echo $telephone; ?>"  id="input-telephone" class="form-control" />
                         <?php if ($error_telephone) { ?>
                         <div class="text-danger"><?php echo $error_telephone; ?></div>
                         <?php  } ?>
@@ -84,13 +84,13 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="fax" value="<?php echo $fax; ?>" placeholder="<?php echo $entry_fax; ?>" id="input-fax" class="form-control" />
+                        <input type="text" name="fax" value="<?php echo $fax; ?>"  id="input-fax" class="form-control" />
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-password"><?php echo $entry_password; ?></label>
                       <div class="col-sm-10">
-                        <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" autocomplete="off" />
+                        <input type="password" name="password" value="<?php echo $password; ?>"  id="input-password" class="form-control" autocomplete="off" />
                         <?php if ($error_password) { ?>
                         <div class="text-danger"><?php echo $error_password; ?></div>
                         <?php  } ?>
@@ -99,7 +99,7 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-confirm"><?php echo $entry_confirm; ?></label>
                       <div class="col-sm-10">
-                        <input type="password" name="confirm" value="<?php echo $confirm; ?>" placeholder="<?php echo $entry_confirm; ?>" autocomplete="off" id="input-confirm" class="form-control" />
+                        <input type="password" name="confirm" value="<?php echo $confirm; ?>"  autocomplete="off" id="input-confirm" class="form-control" />
                         <?php if ($error_confirm) { ?>
                         <div class="text-danger"><?php echo $error_confirm; ?></div>
                         <?php  } ?>
@@ -155,7 +155,7 @@
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-firstname<?php echo $address_row; ?>"><?php echo $entry_firstname; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="address[<?php echo $address_row; ?>][firstname]" value="<?php echo $address['firstname']; ?>" placeholder="<?php echo $entry_firstname; ?>" id="input-firstname<?php echo $address_row; ?>" class="form-control" />
+                        <input type="text" name="address[<?php echo $address_row; ?>][firstname]" value="<?php echo $address['firstname']; ?>"  id="input-firstname<?php echo $address_row; ?>" class="form-control" />
                         <?php if (isset($error_address_firstname[$address_row])) { ?>
                         <div class="text-danger"><?php echo $error_address_firstname[$address_row]; ?></div>
                         <?php } ?>
@@ -164,7 +164,7 @@
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-lastname<?php echo $address_row; ?>"><?php echo $entry_lastname; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="address[<?php echo $address_row; ?>][lastname]" value="<?php echo $address['lastname']; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-lastname<?php echo $address_row; ?>" class="form-control" />
+                        <input type="text" name="address[<?php echo $address_row; ?>][lastname]" value="<?php echo $address['lastname']; ?>"  id="input-lastname<?php echo $address_row; ?>" class="form-control" />
                         <?php if (isset($error_address_lastname[$address_row])) { ?>
                         <div class="text-danger"><?php echo $error_address_lastname[$address_row]; ?></div>
                         <?php } ?>
@@ -173,13 +173,13 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-company<?php echo $address_row; ?>"><?php echo $entry_company; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="address[<?php echo $address_row; ?>][company]" value="<?php echo $address['company']; ?>" placeholder="<?php echo $entry_company; ?>" id="input-company<?php echo $address_row; ?>" class="form-control" />
+                        <input type="text" name="address[<?php echo $address_row; ?>][company]" value="<?php echo $address['company']; ?>"  id="input-company<?php echo $address_row; ?>" class="form-control" />
                       </div>
                     </div>
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-address-1<?php echo $address_row; ?>"><?php echo $entry_address_1; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="address[<?php echo $address_row; ?>][address_1]" value="<?php echo $address['address_1']; ?>" placeholder="<?php echo $entry_address_1; ?>" id="input-address-1<?php echo $address_row; ?>" class="form-control" />
+                        <input type="text" name="address[<?php echo $address_row; ?>][address_1]" value="<?php echo $address['address_1']; ?>"  id="input-address-1<?php echo $address_row; ?>" class="form-control" />
                         <?php if (isset($error_address_address_1[$address_row])) { ?>
                         <div class="text-danger"><?php echo $error_address_address_1[$address_row]; ?></div>
                         <?php } ?>
@@ -188,13 +188,13 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-address-2<?php echo $address_row; ?>"><?php echo $entry_address_2; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="address[<?php echo $address_row; ?>][address_2]" value="<?php echo $address['address_2']; ?>" placeholder="<?php echo $entry_address_2; ?>" id="input-address-2<?php echo $address_row; ?>" class="form-control" />
+                        <input type="text" name="address[<?php echo $address_row; ?>][address_2]" value="<?php echo $address['address_2']; ?>"  id="input-address-2<?php echo $address_row; ?>" class="form-control" />
                       </div>
                     </div>
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-city<?php echo $address_row; ?>"><?php echo $entry_city; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="address[<?php echo $address_row; ?>][city]" value="<?php echo $address['city']; ?>" placeholder="<?php echo $entry_city; ?>" id="input-city<?php echo $address_row; ?>" class="form-control" />
+                        <input type="text" name="address[<?php echo $address_row; ?>][city]" value="<?php echo $address['city']; ?>"  id="input-city<?php echo $address_row; ?>" class="form-control" />
                         <?php if (isset($error_address_city[$address_row])) { ?>
                         <div class="text-danger"><?php echo $error_address_city[$address_row]; ?></div>
                         <?php } ?>
@@ -203,7 +203,7 @@
                     <div class="form-group required">
                       <label class="col-sm-2 control-label" for="input-postcode<?php echo $address_row; ?>"><?php echo $entry_postcode; ?></label>
                       <div class="col-sm-10">
-                        <input type="text" name="address[<?php echo $address_row; ?>][postcode]" value="<?php echo $address['postcode']; ?>" placeholder="<?php echo $entry_postcode; ?>" id="input-postcode<?php echo $address_row; ?>" class="form-control" />
+                        <input type="text" name="address[<?php echo $address_row; ?>][postcode]" value="<?php echo $address['postcode']; ?>"  id="input-postcode<?php echo $address_row; ?>" class="form-control" />
                       </div>
                     </div>
                     <div class="form-group required">
@@ -260,7 +260,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-comment"><?php echo $entry_comment; ?></label>
               <div class="col-sm-10">
-                <textarea name="comment" rows="8" placeholder="<?php echo $entry_comment; ?>" id="input-comment" class="form-control"></textarea>
+                <textarea name="comment" rows="8"  id="input-comment" class="form-control"></textarea>
               </div>
             </div>
             <div class="text-right">
@@ -273,13 +273,13 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-transaction-description"><?php echo $entry_description; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="description" value="" placeholder="<?php echo $entry_description; ?>" id="input-transaction-description" class="form-control" />
+                <input type="text" name="description" value=""  id="input-transaction-description" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-amount"><?php echo $entry_amount; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="amount" value="" placeholder="<?php echo $entry_amount; ?>" id="input-amount" class="form-control" />
+                <input type="text" name="amount" value=""  id="input-amount" class="form-control" />
               </div>
             </div>
             <div class="text-right">
@@ -292,13 +292,13 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-reward-description"><?php echo $entry_description; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="description" value="" placeholder="<?php echo $entry_description; ?>" id="input-reward-description" class="form-control" />
+                <input type="text" name="description" value=""  id="input-reward-description" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-points"><?php echo $entry_points; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="points" value="" placeholder="<?php echo $entry_points; ?>" id="input-points" class="form-control" />
+                <input type="text" name="points" value=""  id="input-points" class="form-control" />
                 <span class="help-block"><?php echo $help_points; ?></span> </div>
             </div>
             <div class="text-right">
@@ -361,37 +361,37 @@ function addAddress() {
 
 	html += '  <div class="form-group required">';
 	html += '    <label class="col-sm-2 control-label" for="input-firstname' + address_row + '"><?php echo $entry_firstname; ?></label>';
-	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][firstname]" value="" placeholder="<?php echo $entry_firstname; ?>" id="input-firstname' + address_row + '" class="form-control" /></div>';
+	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][firstname]" value=""  id="input-firstname' + address_row + '" class="form-control" /></div>';
 	html += '  </div>'; 
 	
 	html += '  <div class="form-group required">';
 	html += '    <label class="col-sm-2 control-label" for="input-lastname' + address_row + '"><?php echo $entry_lastname; ?></label>';
-	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][lastname]" value="" placeholder="<?php echo $entry_lastname; ?>" id="input-lastname' + address_row + '" class="form-control" /></div>';
+	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][lastname]" value=""  id="input-lastname' + address_row + '" class="form-control" /></div>';
 	html += '  </div>'; 
 	
 	html += '  <div class="form-group">';
 	html += '    <label class="col-sm-2 control-label" for="input-company' + address_row + '"><?php echo $entry_company; ?></label>';
-	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][company]" value="" placeholder="<?php echo $entry_company; ?>" id="input-company' + address_row + '" class="form-control" /></div>';
+	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][company]" value=""  id="input-company' + address_row + '" class="form-control" /></div>';
 	html += '  </div>'; 
 	
 	html += '  <div class="form-group required">';
 	html += '    <label class="col-sm-2 control-label" for="input-address-1' + address_row + '"><?php echo $entry_address_1; ?></label>';
-	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][address_1]" value="" placeholder="<?php echo $entry_address_1; ?>" id="input-address-1' + address_row + '" class="form-control" /></div>';
+	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][address_1]" value=""  id="input-address-1' + address_row + '" class="form-control" /></div>';
 	html += '  </div>'; 		
 	
 	html += '  <div class="form-group">';
 	html += '    <label class="col-sm-2 control-label" for="input-address-2' + address_row + '"><?php echo $entry_address_2; ?></label>';
-	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][address_2]" value="" placeholder="<?php echo $entry_address_2; ?>" id="input-address-2' + address_row + '" class="form-control" /></div>';
+	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][address_2]" value=""  id="input-address-2' + address_row + '" class="form-control" /></div>';
 	html += '  </div>'; 
 	
 	html += '  <div class="form-group required">';
 	html += '    <label class="col-sm-2 control-label" for="input-city' + address_row + '"><?php echo $entry_city; ?></label>';
-	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][city]" value="" placeholder="<?php echo $entry_city; ?>" id="input-city' + address_row + '" class="form-control" /></div>';
+	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][city]" value=""  id="input-city' + address_row + '" class="form-control" /></div>';
 	html += '  </div>'; 
 	
 	html += '  <div class="form-group required">';
 	html += '    <label class="col-sm-2 control-label" for="input-postcode' + address_row + '"><?php echo $entry_postcode; ?></label>';
-	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][postcode]" value="" placeholder="<?php echo $entry_postcode; ?>" id="input-postcode' + address_row + '" class="form-control" /></div>';
+	html += '    <div class="col-sm-10"><input type="text" name="address[' + address_row + '][postcode]" value=""  id="input-postcode' + address_row + '" class="form-control" /></div>';
 	html += '  </div>'; 
 
 	html += '  <div class="form-group required">';

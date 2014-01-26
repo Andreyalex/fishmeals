@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="name" value="<?php echo $name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
+            <input type="text" name="name" value="<?php echo $name; ?>"  id="input-name" class="form-control" />
             <?php if ($error_name) { ?>
             <div class="text-danger"><?php echo $error_name; ?></div>
             <?php } ?>
@@ -31,13 +31,13 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-description"><?php echo $entry_description; ?></label>
           <div class="col-sm-10">
-            <textarea name="description" rows="5" placeholder="<?php echo $entry_description; ?>" id="input-description" class="form-control"><?php echo $description; ?></textarea>
+            <textarea name="description" rows="5"  id="input-description" class="form-control"><?php echo $description; ?></textarea>
           </div>
         </div>
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-code"><?php echo $entry_code; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="code" value="<?php echo $code; ?>" placeholder="<?php echo $entry_code; ?>" id="input-code" class="form-control" />
+            <input type="text" name="code" value="<?php echo $code; ?>"  id="input-code" class="form-control" />
             <span class="help-block"><?php echo $help_code; ?></span>
             <?php if ($error_code) { ?>
             <div class="text-danger"><?php echo $error_code; ?></div>
@@ -47,9 +47,9 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-example"><?php echo $entry_example; ?></label>
           <div class="col-sm-10">
-            <input type="text" placeholder="<?php echo $entry_example; ?>" id="input-example1" class="form-control" />
+            <input type="text"  id="input-example1" class="form-control" />
             <br />
-            <input type="text" placeholder="<?php echo $entry_example; ?>" id="input-example2" class="form-control" />
+            <input type="text"  id="input-example2" class="form-control" />
             <span class="help-block"><?php echo $help_example; ?></span></div>
         </div>
       </form>

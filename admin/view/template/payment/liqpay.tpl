@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-merchant"><?php echo $entry_merchant; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="liqpay_merchant" value="<?php echo $liqpay_merchant; ?>" placeholder="<?php echo $entry_merchant; ?>" id="input-merchant" class="form-control" />
+            <input type="text" name="liqpay_merchant" value="<?php echo $liqpay_merchant; ?>"  id="input-merchant" class="form-control" />
             <?php if ($error_merchant) { ?>
             <div class="text-danger"><?php echo $error_merchant; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-signature"><?php echo $entry_signature; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="liqpay_signature" value="<?php echo $liqpay_signature; ?>" placeholder="<?php echo $entry_signature; ?>" id="input-signature" class="form-control" />
+            <input type="text" name="liqpay_signature" value="<?php echo $liqpay_signature; ?>"  id="input-signature" class="form-control" />
             <?php if ($error_signature) { ?>
             <div class="text-danger"><?php echo $error_signature; ?></div>
             <?php } ?>
@@ -57,7 +57,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="liqpay_total" value="<?php echo $liqpay_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="liqpay_total" value="<?php echo $liqpay_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
@@ -106,7 +106,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="liqpay_sort_order" value="<?php echo $liqpay_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="liqpay_sort_order" value="<?php echo $liqpay_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

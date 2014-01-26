@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-merchant"><?php echo $entry_merchant; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="worldpay_merchant" value="<?php echo $worldpay_merchant; ?>" placeholder="<?php echo $entry_merchant; ?>" id="input-merchant" class="form-control" />
+            <input type="text" name="worldpay_merchant" value="<?php echo $worldpay_merchant; ?>"  id="input-merchant" class="form-control" />
             <?php if ($error_merchant) { ?>
             <div class="text-danger"><?php echo $error_merchant; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-password"><?php echo $entry_password; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="worldpay_password" value="<?php echo $worldpay_password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+            <input type="text" name="worldpay_password" value="<?php echo $worldpay_password; ?>"  id="input-password" class="form-control" />
             <span class="help-block"><?php echo $help_password; ?></span>
             <?php if ($error_password) { ?>
             <div class="text-danger"><?php echo $error_password; ?></div>
@@ -69,7 +69,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="worldpay_total" value="<?php echo $worldpay_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="worldpay_total" value="<?php echo $worldpay_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
@@ -118,7 +118,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="worldpay_sort_order" value="<?php echo $worldpay_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="worldpay_sort_order" value="<?php echo $worldpay_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>
