@@ -694,5 +694,9 @@ h2.price {
 
 #top-phones {
     float: left;
-    margin-left: 20%;
+    margin-left: 18%;
+}
+
+.review-layout .review {
+    margin-bottom: 20px;
 }

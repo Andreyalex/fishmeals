@@ -44,6 +44,9 @@
   <div class="container">
 <!--    <div class="pull-left">--><?php //echo $language; ?><!--</div>-->
     <div id="top-links">
+        <div class="pull-left">
+            <a href="/delivery"><i class="fa fa-truck"></i> <span class="hidden-xs hidden-sm hidden-md">Оплата и доставка</span></a>
+        </div>
         <div id="top-phones">
             <i class="fa fa-phone"></i><span>Телефоны:</span>&nbsp;&nbsp;&nbsp;
             <i class="icon-cell-ks"></i><span>096-123-456-78</span>&nbsp;&nbsp;&nbsp;
