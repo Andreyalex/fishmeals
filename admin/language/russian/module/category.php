@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']       = 'Категории';
+$_['heading_title']       = 'Категории'; 
 
 // Text
 $_['text_module']         = 'Модули';
@@ -18,4 +18,3 @@ $_['entry_sort_order']    = 'Порядок сортировки:';
 
 // Error
 $_['error_permission']    = 'У Вас нет прав для изменения модуля категорий!';
-?>

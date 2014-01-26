@@ -57,4 +57,9 @@ $_['error_permission']      = 'Warning: You do not have permission to modify cus
 $_['error_name']            = 'Customer Field Name must be between 1 and 128 characters!';
 $_['error_type']            = 'Warning: Custom Field Values required!';
 $_['error_custom_value']    = 'Custom Value Name must be between 1 and 128 characters!';
-?>
+
+$_['text_account'] = 'Аккаунт';
+$_['text_register'] = 'Регистрация';
+$_['text_edit'] = 'Редактирование профиля';
+$_['entry_storage'] = 'Хранилище';
+$_['entry_status'] = 'Статус:';

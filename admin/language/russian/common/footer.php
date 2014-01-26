@@ -1,4 +1,4 @@
 <?php
 // Text
-$_['text_footer'] = '<a href=http://www.opencart.com>OpenCart</a> &copy; 2009-' . date('Y') . ' All Rights Reserved.Версия %s';
-?>
+$_['text_footer'] = 'Данный релиз подготовлен командой <a href="http://halfhope.ru">halfhope.ru</a>';
+

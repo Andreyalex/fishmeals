@@ -1,7 +1,6 @@
 <?php
-// Heading
+// Heading 
 $_['heading_title']             = 'Способ оплаты';
-
 // Text
 $_['text_account']              = 'Кабинет Партнера';
 $_['text_payment']              = 'Оплата';
@@ -22,4 +21,3 @@ $_['entry_bank_branch_number']  = 'ABA/BSB номер (номер отделен
 $_['entry_bank_swift_code']     = 'SWIFT код:';
 $_['entry_bank_account_name']   = 'Название счёта:';
 $_['entry_bank_account_number'] = 'Номер счёта:';
-?>

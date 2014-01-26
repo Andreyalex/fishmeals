@@ -11,7 +11,7 @@ $_['text_column_left']    = 'Левая колонка';
 $_['text_column_right']   = 'Правая колонка';
 
 // Entry
-$_['entry_product']       = 'Товары:(Автодополнение)';
+$_['entry_product']       = 'Товары:<br /><span class="help">(Автодополнение)</span>';
 $_['entry_limit']         = 'Лимит:';
 $_['entry_image']         = 'Изображение (Ширина x Высота):';
 $_['entry_layout']        = 'Страница:';
@@ -19,7 +19,10 @@ $_['entry_position']      = 'Расположение:';
 $_['entry_status']        = 'Статус:';
 $_['entry_sort_order']    = 'Порядок сортировки:';
 
-// Error
+// Error 
 $_['error_permission']    = 'У Вас нет прав для управления этим модулем!';
 $_['error_image']         = 'Введите рамеры изображения!';
-?>
+
+$_['entry_width'] = 'Ширина';
+$_['entry_height'] = 'Высота';
+$_['help_product'] = '(Автодополнение)';

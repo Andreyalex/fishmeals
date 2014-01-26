@@ -1,7 +1,6 @@
 <?php
-// Heading
+// Heading 
 $_['heading_title']      = 'Личный Кабинет';
-
 // Text
 $_['text_account']       = 'Личный Кабинет';
 $_['text_my_account']    = 'Моя учетная запись';
@@ -15,6 +14,7 @@ $_['text_order']         = 'История заказов';
 $_['text_download']      = 'Файлы для скачивания';
 $_['text_reward']        = 'Бонусные баллы';
 $_['text_return']        = 'Запросы на возврат';
-$_['text_transaction']   = 'История фин. операций';
+$_['text_transaction']   = 'История платежей';
 $_['text_newsletter']    = 'Подписаться или отказаться от подписки на рассылку новостей';
-?>
+$_['text_recurring']     = 'Регулярные платежи';
+$_['text_transactions']  = 'Переводы';

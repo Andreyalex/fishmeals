@@ -19,7 +19,7 @@ $_['column_action']      = 'Действие';
 // Entry
 $_['entry_name']         = 'Производитель:';
 $_['entry_store']        = 'Магазины:';
-$_['entry_keyword']      = 'SEO URL:Должно быть уникальным на всю систему.';
+$_['entry_keyword']      = 'SEO URL:<br/><span class="help">Должно быть уникальным на всю систему.</span>';
 $_['entry_image']        = 'Изображение:';
 $_['entry_sort_order']   = 'Порядок сортировки:';
 $_['entry_type']         = 'Тип:';
@@ -28,4 +28,5 @@ $_['entry_type']         = 'Тип:';
 $_['error_permission']   = 'У Вас нет прав для изменения производителей!';
 $_['error_name']         = 'Название производителя должно быть от 3 до 64 символов!';
 $_['error_product']      = 'Этот производитель не может быть удален, поскольку в настоящее время он прикреплен к %s товару(ам)!';
-?>
+
+$_['help_keyword'] = 'Do not use spaces instead replace spaces with - and make sure the keyword is globally unique.';

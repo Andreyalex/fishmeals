@@ -1,14 +1,14 @@
 <?php
 // Heading
-$_['heading_title']         = 'Отчет по заказам покупателей';
+$_['heading_title']         = 'Отчет по заказам клиентов';
 
 // Text
 $_['text_all_status']       = 'Все статусы';
 
 // Column
-$_['column_customer']       = 'Имя покупателя';
+$_['column_customer']       = 'Имя клиента';
 $_['column_email']          = 'E-Mail';
-$_['column_customer_group'] = 'Группа покупателя';
+$_['column_customer_group'] = 'Группа клиента';
 $_['column_status']         = 'Статус';
 $_['column_orders']         = 'Кол-во заказов';
 $_['column_products']       = 'Кол-во товаров';
@@ -19,4 +19,3 @@ $_['column_action']         = 'Действие';
 $_['entry_date_start']      = 'Дата начала:';
 $_['entry_date_end']        = 'Дата окончания:';
 $_['entry_status']          = 'Статус заказа:';
-?>

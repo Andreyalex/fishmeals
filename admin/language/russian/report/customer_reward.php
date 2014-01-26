@@ -1,11 +1,11 @@
 <?php
 // Heading
-$_['heading_title']         = 'Отчет по бонусным баллам покупателя';
+$_['heading_title']         = 'Отчет по бонусным баллам клиента';
 
 // Column
-$_['column_customer']       = 'Имя покупателя';
+$_['column_customer']       = 'Имя клиента';
 $_['column_email']          = 'E-Mail';
-$_['column_customer_group'] = 'Группа покупателя';
+$_['column_customer_group'] = 'Группа клиента';
 $_['column_status']         = 'Статус';
 $_['column_points']         = 'Бонусные баллы';
 $_['column_orders']         = 'Кол-во заказов';
@@ -15,4 +15,3 @@ $_['column_action']         = 'Действие';
 // Entry
 $_['entry_date_start']      = 'Дата начала:';
 $_['entry_date_end']        = 'Дата окончания:';
-?>

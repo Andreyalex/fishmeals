@@ -11,7 +11,7 @@ $_['entry_restore']    = 'Востановить базу данных:';
 $_['entry_backup']     = 'Бэкап:';
 
 // Error
-$_['error_permission'] = 'У Вас нет прав для управления этим модулем!';
-$_['error_backup']     = 'Надо выбрать хотя бы одну таблицу!';
-$_['error_empty']      = 'Загруженный файл пуст!';
+$_['error_permission'] = 'Warning: You do not have permission to modify backups!';
+$_['error_backup']     = 'Warning: You must select at least one table to backup!';
+$_['error_empty']      = 'Warning: The file you uploaded was empty!';
 ?>

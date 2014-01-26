@@ -21,4 +21,6 @@ $_['entry_sort_order']    = 'Порядок сортировки:';
 // Error
 $_['error_permission']    = 'У Вас нет прав для управления этим модулем!';
 $_['error_dimension']     = 'Введите размеры!';
-?>
+
+$_['entry_width'] = 'Ширина';
+$_['entry_height'] = 'Высота';
