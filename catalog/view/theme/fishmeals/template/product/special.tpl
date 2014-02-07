@@ -16,12 +16,9 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h2><?php echo $heading_title; ?></h2>
       <?php if ($products) { ?>
-      <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
       <div class="row">
         <div class="col-sm-3">
           <div class="btn-group">
-            <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
-            <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
           </div>
         </div>
         <div class="col-sm-1 col-sm-offset-2 text-right">
@@ -56,7 +53,7 @@
       <br />
       <div class="row">  
         <?php foreach ($products as $product) { ?>     
-        <div class="product-layout product-list col-xs-12">
+        <div class="product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="product-thumb">
             <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
             <div class="caption">

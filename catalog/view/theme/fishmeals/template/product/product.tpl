@@ -138,7 +138,23 @@
             <?php } ?>
             <li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
           </ul>
-          <?php if ($price) { ?>
+
+          <?php
+          $opsCntTotal = 1;
+          $optionsRes = array();
+          $ops = array();
+          $hiddenFields = array();
+          foreach($options as $option) {
+              if (in_array($option['type'], array('radio', 'checkbox'))) {
+                  reset($option['product_option_value']);
+                  $opsCntTotal *= count($option['product_option_value']);
+                  $hiddenFields[] = '<input id="input-option'.$option['product_option_id'].'" type="hidden" name="option['.$option['product_option_id'].']" value="" />';
+                  $optionsRes[] = $option;
+              }
+          }
+          ?>
+
+          <?php if (empty($optionsRes) && $price) { ?>
           <ul class="list-unstyled">
             <?php if (!$special) { ?>
             <li>
@@ -169,8 +185,8 @@
           <div id="product">
 
             <div class="form-group">
-              <label class="control-label" for="input-quantity"><?php echo $entry_qty; ?></label>
-              <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
+<!--              <label class="control-label" for="input-quantity">--><?php //echo $entry_qty; ?><!--</label>-->
+              <input type="hidden" name="quantity" value="" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
             </div>
@@ -185,77 +201,17 @@
             <?php foreach ($options as $option) { ?>
             <?php if ($option['type'] == 'select') { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-              <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
-              <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
-                <option value=""><?php echo $text_select; ?></option>
-                <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
-                <?php if ($option_value['price']) { ?>
-                (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                <?php } ?>
-                </option>
-                <?php } ?>
-              </select>
-            </div>
-            <?php } ?>
-            <?php if ($option['type'] == 'radio') { ?>
-              <?php if ($option['name'] == "Цвет") {
-                  $buyButtonRendered = true;
-                ?>
-                <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-                  <div id="input-option<?php echo $option['product_option_id']; ?>">
-                      <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                      <div class="radio">
-                          <label style="display:inline-block;width:150px;">
-                              <?php echo $option['name'] . ' ' . strtolower($option_value['name']); ?>
-                              <?php if ($option_value['price']) { ?>
-                              (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                              <?php } ?>
-                          </label>
-                          <button type="button" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary button-cart" onclick="$('#color-radio-buy').val(<?php echo $option_value['product_option_value_id']; ?>)" style="width: 150px;"><?php echo $button_cart; ?></button>
-                      </div>
-                      <?php } ?>
-                      <input id='color-radio-buy' type="hidden" name="option[<?php echo $option['product_option_id']; ?>]" value="" />
-                  </div>
-                </div>
-              <?php } else { ?>
-
-                <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-                  <label class="control-label"><?php echo $option['name']; ?></label>
-                  <div id="input-option<?php echo $option['product_option_id']; ?>">
+                <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
+                <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
+                    <option value=""><?php echo $text_select; ?></option>
                     <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
-                        <?php echo $option_value['name']; ?>
-                        <?php if ($option_value['price']) { ?>
-                        (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                        <?php } ?>
-                      </label>
-                    </div>
+                        <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                            <?php if ($option_value['price']) { ?>
+                                (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                            <?php } ?>
+                        </option>
                     <?php } ?>
-                  </div>
-                </div>
-
-
-              <?php } ?>
-            <?php } ?>
-            <?php if ($option['type'] == 'checkbox') { ?>
-            <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-              <label class="control-label"><?php echo $option['name']; ?></label>
-              <div id="input-option<?php echo $option['product_option_id']; ?>">
-                <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="option[<?php echo $option['product_option_id']; ?>][]" value="<?php echo $option_value['product_option_value_id']; ?>" />
-                    <?php echo $option_value['name']; ?>
-                    <?php if ($option_value['price']) { ?>
-                    (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                    <?php } ?>
-                  </label>
-                </div>
-                <?php } ?>
-              </div>
+                </select>
             </div>
             <?php } ?>
             <?php if ($option['type'] == 'image') { ?>
@@ -314,7 +270,54 @@
             </div>
             <?php } ?>
             <?php } ?>
-            <?php } ?>
+
+            <div style="overflow: hidden">
+
+            <?php
+            for($i = 0; $i < $opsCntTotal; $i++) {
+                $buyButtonRendered = true;
+                $priceDiff = 0;
+                ?>
+
+                <div class="options-custom-item">
+                    <div class="options-custom" style="overflow:hidden;">
+
+                <?php
+                foreach($optionsRes as $id => &$option) {
+                    ?><div><?php
+                    $optionValues = &$option['product_option_value'];
+                    $option_value = current($optionValues);
+                    echo $option['name'] . ' ' . strtolower($option_value['name']);
+                    echo '<span class="option-value" data-option="option['.$option['product_option_id'].']" data-value="'.$option_value['product_option_value_id'].'"></span>';
+
+                    if (key($optionValues) == count($optionValues) - 1 && $id > 0) {
+                        next($optionsRes[$id-1]['product_option_value']);
+                        reset($optionValues);
+                    }
+
+                    // Increment only if it a last in line
+                    if ($id == count($optionsRes)) {
+                        next($optionValues);
+                    }
+
+                    $priceDiff += floatval($option_value['price_prefix'].$option_value['price']);
+
+                    ?></div><?php
+                }
+                ?></div><?php
+                ?><div class="price-custom">
+                    <h3 style="text-align:right;margin-top:0;margin-bottom:2px"><?php echo (floatval($price) + $priceDiff) . ' грн' ?></h3>
+                    <button type="button" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary button-cart" onclick="$('#color-radio-buy').val(<?php echo $option_value['product_option_value_id']; ?>)" style="width: 150px;"><?php echo $button_cart; ?></button>
+                  </div>
+                </div>
+                <?php
+             }
+
+            ?></div><?php
+          }
+
+          echo implode($hiddenFields, "\n");
+          ?>
           </div>
           <div class="form-group">
               <?php if(empty($buyButtonRendered)) { ?>
@@ -405,55 +408,110 @@
         <?php } ?>
       </div>
       <?php } ?>
-      <?php if ($tags) { ?>
-      <p><?php echo $text_tags; ?>
-        <?php for ($i = 0; $i < count($tags); $i++) { ?>
-        <?php if ($i < (count($tags) - 1)) { ?>
-        <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>,
-        <?php } else { ?>
-        <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>
-        <?php } ?>
-        <?php } ?>
-      </p>
-      <?php } ?>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<style>
+    .ui-widget-overlay {
+        background: #aaaaaa no-repeat !important;
+    }
+</style>
+
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<div id="dialog-quantity" title="Количество">
+    <div>Укажите количество единиц товара</div>
+    <br/>
+    <div style="overflow: hidden"><input class="qty" style="float:left; line-height:24px" size="10" type="text" autofocus="autofocus" value="1"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="float:right;width:150px;display:inline-block;" class="btn btn-success confirm">Добавить в корзину</span></div>
+    <div class="label-error" style="color:red;font-size:12px;line-height:28px"></div>
+</div>
+
 <script type="text/javascript"><!--
+
+$("#dialog-quantity").dialog({
+    autoOpen: false,
+    draggable: false,
+    modal: true
+});
+
+$("#dialog-quantity").on('click', '.confirm', function(){
+    var
+        reg = new RegExp("^[0-9]+$"),
+        error = '',
+        qty = $("#dialog-quantity").find('.qty').val();
+
+    if (!reg.test(qty)) {
+        error = 'Количество должно быть целым числом';
+        $("#dialog-quantity").find('.label-error').html(error);
+    }
+
+    $('[name="quantity"]').val(qty);
+
+    $("#dialog-quantity").trigger('complete');
+})
+
 $('.button-cart').on('click', function() {
+
+    var btn = $(this),
+        container = btn.parents('.options-custom-item'),
+        options = container.find('.option-value');
+
+    $.each(options,function(){
+        var
+            key = $(this).attr('data-option'),
+            value = $(this).attr('data-value');
+        target = $('[name="'+key+'"]');
+        target.val(value);
+
+    })
+
+    $("#dialog-quantity").dialog("open");
+});
+
+$("#dialog-quantity").on('complete', function() {
+
     $.ajax({
         url: 'index.php?route=checkout/cart/add',
         type: 'post',
         data: $('#product input[type=\'text\'], #product input[type=\'date\'], #product input[type=\'datetime-local\'], #product input[type=\'time\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
         dataType: 'json',
         beforeSend: function() {
-        	$('.button-cart').button('loading');
-		},      
+            $("#dialog-quantity").find('.btn.confirm').text('Подождите...')
+        },
         complete: function() {
-			$('.button-cart').button('reset');
-        },		
+            //$('.button-cart').button('reset');
+        },
         success: function(json) {
+
             $('.alert, .text-danger').remove();
-            
+
             if (json['error']) {
+
+                $("#dialog-quantity").dialog("close");
+
                 if (json['error']['option']) {
                     for (i in json['error']['option']) {
                         $('#input-option' + i).after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
                     }
                 }
-            } 
-            
+            }
+
             if (json['success']) {
-                $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                    
-                $('#cart-total').html(json['total']);
-                
-                $('html, body').animate({ scrollTop: 0 }, 'slow'); 
-            }   
+
+                window.location.reload();
+//                $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+//
+//                $('#cart-total').html(json['total']);
+//
+//                $('html, body').animate({ scrollTop: 0 }, 'slow');
+            }
         }
     });
 });
-//--></script> 
+
+//--></script>
 <script type="text/javascript"><!--
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
@@ -542,5 +600,7 @@ $('#button-review').on('click', function() {
         }
     });
 });
-//--></script> 
+//--></script>
+
+
 <?php echo $footer; ?>

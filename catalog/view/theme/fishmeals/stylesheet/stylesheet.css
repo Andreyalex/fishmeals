@@ -718,3 +718,17 @@ h2.price {
 .text-description * {
     word-wrap:break-word;
 }
+
+#product .options-custom-item {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#product .options-custom {
+    float:left;
+    overflow: hidden;
+}
+
+#product .price-custom {
+    float:right;
+}
