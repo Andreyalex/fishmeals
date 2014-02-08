@@ -104,7 +104,16 @@ class Image {
 	}
 
 	public function watermark($file, $position = 'bottomright') {
-		$watermark = $this->create($file);
+
+        $info = getimagesize($file);
+        $mime = $info['mime'];
+        if ($mime == 'image/gif') {
+            $watermark = imagecreatefromgif($file);
+        } elseif ($mime == 'image/png') {
+            $watermark = imagecreatefrompng($file);
+        } elseif ($mime == 'image/jpeg') {
+            $watermark = imagecreatefromjpeg($file);
+        }
 
 		$watermark_width = imagesx($watermark);
 		$watermark_height = imagesy($watermark);
@@ -128,7 +137,7 @@ class Image {
 				break;
 		}
 
-		imagecopy($this->image, $watermark, $watermark_pos_x, $watermark_pos_y, 0, 0, 120, 40);
+		imagecopy($this->image, $watermark, $watermark_pos_x, $watermark_pos_y, 0, 0, $watermark_width, $watermark_height);
 
 		imagedestroy($watermark);
 	}
