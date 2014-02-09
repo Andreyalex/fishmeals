@@ -90,8 +90,17 @@ class ControllerProductCategory extends Controller {
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
 		if ($category_info) {
-	  		$this->document->setTitle($category_info['meta_title']);
-			$this->document->setDescription($category_info['meta_description']);
+
+            $title = !empty($category_info['meta_title'])?
+                $category_info['meta_title'] :
+                str_replace('{{category.name}}', trim($category_info['name']), CATEGORY_TAG_TITLE_TPL);
+	  		$this->document->setTitle($title);
+
+            $desc = !empty($category_info['meta_description'])?
+                $category_info['meta_description'] :
+                str_replace('{{category.name}}', trim($category_info['name']), CATEGORY_META_DESCRIPTION_TPL);
+			$this->document->setDescription($desc);
+
 			$this->document->setKeywords($category_info['meta_keyword']);
 			$this->document->addLink($this->url->link('product/category', 'path=' . $this->request->get['path']), 'canonical');
 			$this->document->addScript('catalog/view/javascript/jquery/jquery.total-storage.min.js');

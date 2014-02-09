@@ -31,7 +31,7 @@ $_['error_checkout']    	= 'Эту страницу нельзя удалить,
 $_['error_affiliate']   	= 'Страница не может быть удалена, поскольку она используется в условиях партнерской программы!';
 $_['error_store']       	= 'Эту страницу нельзя удалить, поскольку она используется в %s магазинах!';
 
-$_['entry_meta_title'] = 'Название мета тега';
+$_['entry_meta_title'] = 'Тег &lt;title&gt;';
 $_['entry_meta_keyword'] = 'Мета теги';
 $_['entry_meta_description'] = 'Описание мета тега';
 $_['help_keyword'] = 'Do not use spaces instead replace spaces with - and make sure the keyword is globally unique.';

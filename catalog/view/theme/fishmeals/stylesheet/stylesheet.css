@@ -15,7 +15,7 @@ body {
 	line-height: 20px;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #444;
+	color: #222;
 }
 a {
 	color: #f28105;
@@ -799,7 +799,30 @@ h2.price {
     display: inherit;
 }
 
-#column-right .module {
-
+#content .module {
     margin-bottom: 20px;
+}
+
+#column-right .module {
+    margin-bottom: 20px;
+}
+
+.module-featured .product-thumb {
+    margin-bottom: 0px;
+}
+
+.form-controls-inline .form-group {
+    overflow: hidden;
+}
+
+.form-controls-inline .control-label {
+    float: left;
+    width: 300px;
+    text-align: right;
+    padding: 5px 20px;
+}
+
+.form-controls-inline .form-control {
+    float: left;
+    width: 300px;
 }

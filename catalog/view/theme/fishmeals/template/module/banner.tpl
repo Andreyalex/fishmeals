@@ -1,4 +1,4 @@
-<div id="module-banner<?php echo $module; ?>" class="module-banner">
+<div id="module-banner<?php echo $module; ?>" class="module module-banner">
   <ul>
     <?php foreach ($banners as $banner) { ?>
     <?php if ($banner['link']) { ?>
