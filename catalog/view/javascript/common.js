@@ -122,9 +122,7 @@ function addToCart(product_id, quantity) {
             
             if (json['success']) {
                 $('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                
-                $('#cart-total').html(json['total']);
-                
+                $('#cart').load('index.php?route=module/cart' + ' #cart > *');
                 $('html, body').animate({ scrollTop: 0 }, 'slow'); 
             }
         }

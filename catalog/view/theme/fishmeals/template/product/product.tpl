@@ -283,25 +283,33 @@
 
                 <?php
                 foreach($optionsRes as $id => &$option) {
-                    ?><div><?php
+
                     $optionValues = &$option['product_option_value'];
                     $option_value = current($optionValues);
-                    echo $option['name'] . ' ' . strtolower($option_value['name']);
-                    echo '<span class="option-value" data-option="option['.$option['product_option_id'].']" data-value="'.$option_value['product_option_value_id'].'"></span>';
-
-                    if (key($optionValues) == count($optionValues) - 1 && $id > 0) {
-                        next($optionsRes[$id-1]['product_option_value']);
-                        reset($optionValues);
-                    }
-
-                    // Increment only if it a last in line
-                    if ($id == count($optionsRes)) {
-                        next($optionValues);
-                    }
+                    $html =
+                        $option['name'] . ' ' . strtolower($option_value['name']).
+                        '<span class="option-value" data-option="option['.$option['product_option_id'].']" data-value="'.$option_value['product_option_value_id'].'"></span>';
 
                     $priceDiff += floatval($option_value['price_prefix'].$option_value['price']);
 
-                    ?></div><?php
+                    // If it a last in options
+                    if ($id == count($optionsRes) - 1) {
+
+                        // If it a last value in current option
+                        if(key($optionValues) == count($optionValues) - 1) {
+
+                            reset($optionValues);
+                            if ($id > 0) {
+                                // Increment the pointer of the previous option
+                                next($optionsRes[$id-1]['product_option_value']);
+                            }
+
+                        } else {
+                            next($optionValues);
+                        }
+                    }
+
+                    echo '<div>'.$html.'</div>';
                 }
                 ?></div><?php
                 ?><div class="price-custom">
@@ -337,8 +345,8 @@
             <hr>
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script> 
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script> 
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
             <!-- AddThis Button END --> 
           </div>
           <?php } ?>
@@ -466,6 +474,7 @@ $('.button-cart').on('click', function() {
 
     })
 
+    $("#dialog-quantity").find('.btn.confirm').text('Добавить в корзину')
     $("#dialog-quantity").dialog("open");
 });
 
@@ -484,6 +493,8 @@ $("#dialog-quantity").on('complete', function() {
         },
         success: function(json) {
 
+            $("#dialog-quantity").dialog("close");
+
             $('.alert, .text-danger').remove();
 
             if (json['error']) {
@@ -498,13 +509,9 @@ $("#dialog-quantity").on('complete', function() {
             }
 
             if (json['success']) {
-
-                window.location.reload();
-//                $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-//
-//                $('#cart-total').html(json['total']);
-//
-//                $('html, body').animate({ scrollTop: 0 }, 'slow');
+                $('#cart').load('index.php?route=module/cart' + ' #cart > *');
+                $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
             }
         }
     });

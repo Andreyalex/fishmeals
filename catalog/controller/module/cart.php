@@ -136,9 +136,12 @@ class ControllerModuleCart extends Controller {
 		$data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
 				
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/cart.tpl')) {
-			return $this->load->view($this->config->get('config_template') . '/template/module/cart.tpl', $data);
+            $view = $this->load->view($this->config->get('config_template') . '/template/module/cart.tpl', $data);
 		} else {
-			return $this->load->view('default/template/module/cart.tpl', $data);
-		}		
+            $view = $this->load->view('default/template/module/cart.tpl', $data);
+		}
+
+        $this->response->setOutput($view);
+        return $view;
 	}
 }
