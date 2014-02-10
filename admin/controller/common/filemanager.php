@@ -273,7 +273,8 @@ class ControllerCommonFileManager extends Controller {
 		}
 
 		if (!$json) {
-			move_uploaded_file($this->request->files['file']['tmp_name'], $directory . '/' . $filename);     
+			move_uploaded_file($this->request->files['file']['tmp_name'], $directory . '/' . $filename);
+            copy($directory . '/' . $filename, $directory . '/' . $filename.'.clear');
 
             require_once DIR_APPLICATION . '/plugin/watermark.php';
             $plugin = new AdminPluginWatermark();
