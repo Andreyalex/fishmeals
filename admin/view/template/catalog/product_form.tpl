@@ -14,11 +14,13 @@
     <div class="panel-heading">
       <div class="pull-right">
         <button type="submit" form="form-product" class="btn btn-primary"><i class="fa fa-check"></i> <?php echo $button_save; ?></button>
+        <button type="submit" onclick='console.log(jQuery("[name=action]"));jQuery("[name=action]").val("update");' form="form-product" class="btn btn-success"><i class="fa fa-check"></i>Применить</button>
         <a href="<?php echo $cancel; ?>" class="btn btn-danger"><i class="fa fa-times"></i> <?php echo $button_cancel; ?></a></div>
       <h1 class="panel-title"><i class="fa fa-pencil-square fa-lg"></i> <?php echo $heading_title; ?></h1>
     </div>
     <div class="panel-body">
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-product" class="form-horizontal">
+        <input type="hidden" name="action" value="" />
         <ul class="nav nav-tabs">
           <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
           <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
@@ -56,6 +58,12 @@
                     <textarea name="product_description[<?php echo $language['language_id']; ?>][description]"  id="input-description<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description'] : ''; ?></textarea>
                   </div>
                 </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label" for="input-receipt<?php echo $language['language_id']; ?>">Рецепты:</label>
+                      <div class="col-sm-10">
+                          <textarea name="product_description[<?php echo $language['language_id']; ?>][receipt]"  id="input-receipt<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['receipt'] : ''; ?></textarea>
+                      </div>
+                  </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-meta-title<?php echo $language['language_id']; ?>"><?php echo $entry_meta_title; ?></label>
                   <div class="col-sm-10">
@@ -840,6 +848,7 @@
 <script type="text/javascript"><!--
 <?php foreach ($languages as $language) { ?>
 CKEDITOR.replace('input-description<?php echo $language['language_id']; ?>');
+CKEDITOR.replace('input-receipt<?php echo $language['language_id']; ?>');
 <?php } ?>
 //--></script> 
 <script type="text/javascript"><!--

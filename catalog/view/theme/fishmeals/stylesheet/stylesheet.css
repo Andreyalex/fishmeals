@@ -496,6 +496,7 @@ footer h5 {
 }
 .product-thumb .image {
 	text-align: center;
+    margin: 10px;
 }
 .product-thumb .image a {
 	display: block;
@@ -520,9 +521,15 @@ footer h5 {
 	font-weight: bold;
 }
 .product-thumb .caption {
-	padding: 0 20px;
-	min-height: 180px;
+	padding: 10px 10px;
+    min-height: 220px;
 }
+
+.product-thumb .caption > p {
+    max-height: 100px;
+    overflow: hidden;
+}
+
 .product-list .product-thumb .caption {
 	margin-left: 230px;
 }
@@ -564,7 +571,10 @@ h2.price {
 	margin: 0;
 }
 .product-thumb .price {
-	color: #444;
+    color: #de7605;
+    font-size: 20px;
+    text-align: right;
+    padding: 10px;
 }
 .product-thumb .price-new {
 	font-weight: 600;

@@ -117,8 +117,12 @@ class ControllerProductProduct extends Controller {
 			if (isset($this->request->get['description'])) {
 				$url .= '&description=' . $this->request->get['description'];
 			}
-			
-			if (isset($this->request->get['category_id'])) {
+
+            if (isset($this->request->get['receipt'])) {
+                $url .= '&receipt=' . $this->request->get['receipt'];
+            }
+
+            if (isset($this->request->get['category_id'])) {
 				$url .= '&category_id=' . $this->request->get['category_id'];
 			}	
 
@@ -183,9 +187,13 @@ class ControllerProductProduct extends Controller {
 			
 			if (isset($this->request->get['description'])) {
 				$url .= '&description=' . $this->request->get['description'];
-			}	
-						
-			if (isset($this->request->get['category_id'])) {
+			}
+
+            if (isset($this->request->get['receipt'])) {
+                $url .= '&receipt=' . $this->request->get['receipt'];
+            }
+
+            if (isset($this->request->get['category_id'])) {
 				$url .= '&category_id=' . $this->request->get['category_id'];
 			}
 			
@@ -264,6 +272,7 @@ class ControllerProductProduct extends Controller {
 			$this->load->model('catalog/review');
 
 			$data['tab_description'] = $this->language->get('tab_description');
+            $data['tab_receipt'] = $this->language->get('tab_receipt');
 			$data['tab_attribute'] = $this->language->get('tab_attribute');
 			$data['tab_review'] = sprintf($this->language->get('tab_review'), $product_info['reviews']);
 			
@@ -393,6 +402,7 @@ class ControllerProductProduct extends Controller {
 			$data['reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
 			$data['rating'] = (int)$product_info['rating'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
+			$data['receipt'] = html_entity_decode($product_info['receipt'], ENT_QUOTES, 'UTF-8');
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 			
 			$data['products'] = array();
@@ -435,6 +445,7 @@ class ControllerProductProduct extends Controller {
 					'thumb'   	  => $image,
 					'name'    	  => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
+					'receipt'     => utf8_substr(strip_tags(html_entity_decode($result['receipt'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
 					'price'   	  => $price,
 					'special' 	  => $special,
 					'tax'         => $tax,
@@ -496,8 +507,12 @@ class ControllerProductProduct extends Controller {
 			if (isset($this->request->get['description'])) {
 				$url .= '&description=' . $this->request->get['description'];
 			}
-					
-			if (isset($this->request->get['category_id'])) {
+
+            if (isset($this->request->get['receipt'])) {
+                $url .= '&receipt=' . $this->request->get['receipt'];
+            }
+
+            if (isset($this->request->get['category_id'])) {
 				$url .= '&category_id=' . $this->request->get['category_id'];
 			}
 			

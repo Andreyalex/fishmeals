@@ -5,9 +5,8 @@
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <div class="product-thumb transition">
           <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-            <div class="caption">
             <?php if ($product['price']) { ?>
-                <div class="price">
+                <div class="price" style="padding-top:0">
                     <?php if (!$product['special']) { ?>
                         <?php echo $product['price']; ?>
                     <?php } else { ?>
@@ -18,7 +17,6 @@
                     <?php } ?>
                 </div>
             <?php } ?>
-            </div>
             <div class="button-group" class="col-xs-12">
                 <button style="width:100%" type="button" onclick="addToCart('64');"><i class="fa fa-shopping-cart"></i> <span>Купить</span></button>
             </div>

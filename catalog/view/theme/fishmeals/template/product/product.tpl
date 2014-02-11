@@ -37,6 +37,9 @@
           <?php } ?>
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
+            <?php if (!empty($receipt)) { ?>
+            <li><a href="#tab-receipt" data-toggle="tab">Рецепты</a></li>
+            <?php } ?>
             <?php if ($attribute_groups) { ?>
             <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <?php } ?>
@@ -46,6 +49,9 @@
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
+            <?php if (!empty($receipt)) { ?>
+              <div class="tab-pane" id="tab-receipt"><?php echo $receipt; ?></div>
+            <?php } ?>
             <?php if ($attribute_groups) { ?>
             <div class="tab-pane" id="tab-specification">
               <table class="table table-bordered">
