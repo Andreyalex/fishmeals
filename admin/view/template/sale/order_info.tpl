@@ -7,7 +7,12 @@
   </ul>
   <div class="panel panel-default">
     <div class="panel-heading">
-      <div class="pull-right"><button type="button" id="button-restock" data-toggle="tooltip" title="<?php echo $help_restock; ?>" class="btn btn-warning"><i class="fa fa-reply"></i> <?php echo $button_restock; ?></button> <a href="<?php echo $invoice; ?>" target="_blank" class="btn btn-info"><i class="fa fa-print"></i> <?php echo $button_invoice; ?></a> <a href="<?php echo $cancel; ?>" class="btn btn-danger"><i class="fa fa-times"></i> <?php echo $button_cancel; ?></a></div>
+      <div class="pull-right">
+          <a href="<?php echo $invoice; ?>&pdf=true" class="btn btn-info"><?php echo $button_pdf_invoice; ?></a>
+          <button type="button" id="button-restock" data-toggle="tooltip" title="<?php echo $help_restock; ?>" class="btn btn-warning"><i class="fa fa-reply"></i> <?php echo $button_restock; ?></button>
+          <a href="<?php echo $invoice; ?>" target="_blank" class="btn btn-info"><i class="fa fa-print"></i> <?php echo $button_invoice; ?></a>
+          <a href="<?php echo $cancel; ?>" class="btn btn-danger"><i class="fa fa-times"></i> <?php echo $button_cancel; ?></a>
+      </div>
       <h1 class="panel-title"><i class="fa fa-info-circle fa-lg"></i> <?php echo $heading_title; ?></h1>
     </div>
     <div class="panel-body">

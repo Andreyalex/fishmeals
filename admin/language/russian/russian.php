@@ -169,3 +169,4 @@ $_['tab_marketing'] = 'Marketing';
 $_['tab_online'] = 'Людей онлайн';
 $_['tab_activity'] = 'Последняя активность';
 $_['error_exception'] = 'Error Code(%s): %s in %s on line %s';
+$_['button_pdf_invoice']	= 'Скачать PDF';
