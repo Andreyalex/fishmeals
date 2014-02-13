@@ -3,6 +3,7 @@ class ControllerSaleOrder extends Controller {
 	private $error = array();
 
 	public function index() {
+
 		$this->load->language('sale/order');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -248,7 +249,6 @@ class ControllerSaleOrder extends Controller {
 		$data['entry_date_modified'] = $this->language->get('entry_date_modified');
 
 		$data['button_invoice'] = $this->language->get('button_invoice');
-        $this['button_pdf_invoice'] = $this->language->get('button_pdf_invoice');
 		$data['button_picklist'] = $this->language->get('button_picklist');
 		$data['button_insert'] = $this->language->get('button_insert');
 		$data['button_edit'] = $this->language->get('button_edit');
