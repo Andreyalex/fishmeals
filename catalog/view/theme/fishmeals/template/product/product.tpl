@@ -38,7 +38,7 @@
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
             <?php if (!empty($receipt)) { ?>
-            <li><a href="#tab-receipt" data-toggle="tab">Рецепты</a></li>
+            <li><a href="#tab-receipt" data-toggle="tab">Советы и рецепты</a></li>
             <?php } ?>
             <?php if ($attribute_groups) { ?>
             <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
