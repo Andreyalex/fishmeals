@@ -2,7 +2,7 @@
 // Heading
 $_['heading_title']     = 'Поиск'; 
 // Text
-$_['text_search']       = 'Товары, соответствующие критериям поиска';
+$_['text_search']       = 'Результаты поиска';
 $_['text_keyword']      = 'Ключевые слова';
 $_['text_category']     = 'Все категории';
 $_['text_sub_category'] = 'Поиск в подкатегориях';

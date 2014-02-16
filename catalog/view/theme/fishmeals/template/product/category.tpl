@@ -53,14 +53,12 @@
       <?php } ?>
       <?php } ?>
       <?php if ($products) { ?>
-      <div class="row">
-          <div class="col-sm-3">
-          </div>
-        <div class="col-md-2 text-right">
+      <div class="row"  style="text-align: right;">
+        <div class="col-md-2 text-right" style="display:inline-block;float:none;">
           <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
         </div>
-        <div class="col-md-3 text-right">
-          <select id="input-sort" class="form-control col-sm-3" onchange="location = this.value;">
+        <div class="col-md-3 text-right" style="display:inline-block;float:none;">
+          <select id="input-sort" class="form-control" onchange="location = this.value;">
             <?php foreach ($sorts as $sorts) { ?>
             <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
             <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
@@ -70,10 +68,10 @@
             <?php } ?>
           </select>
         </div>
-        <div class="col-md-1 text-right">
+        <div class="col-md-1 text-right" style="display:inline-block;float:none;">
           <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
         </div>
-        <div class="col-md-2 text-right">
+        <div class="col-md-2 text-right" style="display:inline-block;float:none;">
           <select id="input-limit" class="form-control" onchange="location = this.value;">
             <?php foreach ($limits as $limits) { ?>
             <?php if ($limits['value'] == $limit) { ?>
