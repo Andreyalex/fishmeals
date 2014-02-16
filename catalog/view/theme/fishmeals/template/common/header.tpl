@@ -48,10 +48,16 @@
             <a href="/delivery"><i class="fa fa-truck"></i> <span class="hidden-xs hidden-sm hidden-md">Оплата и доставка</span></a>
         </div>
         <div id="top-phones">
-            <i class="fa fa-phone"></i><span>Телефоны:</span>&nbsp;&nbsp;&nbsp;
-            <i class="icon-cell-ks"></i><span>096-123-456-78</span>&nbsp;&nbsp;&nbsp;
-            <i class="icon-cell-life"></i><span>063-890-567-34</span>&nbsp;&nbsp;&nbsp;
-            <i class="icon-cell-mts"></i><span>050-456-324-12</span>&nbsp;&nbsp;&nbsp;
+            <?php
+            $phones = array();
+            preg_match_all('/([[:alnum:]]+)\s*:\s*([[:alnum:]]+)/', $telephone, $phones, PREG_SET_ORDER);
+            if (!empty($phones)) {
+            ?>
+                <i class="fa fa-phone"></i><span>Телефоны:</span>&nbsp;&nbsp;&nbsp;
+                <?php foreach($phones as $phone) { ?>
+                    <i class="icon-cell-<?php echo $phone[1]; ?>"></i><span><?php echo $phone[2]; ?></span>&nbsp;&nbsp;&nbsp;
+                <?php } ?>
+            <?php } ?>
         </div>
         <div class="pull-right">
             <a href="<?php echo $account; ?>"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span></a>

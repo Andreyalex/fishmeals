@@ -1249,9 +1249,9 @@ class ControllerSettingSetting extends Controller {
       		$this->error['email'] = $this->language->get('error_email');
     	}
 
-    	if ((utf8_strlen($this->request->post['config_telephone']) < 3) || (utf8_strlen($this->request->post['config_telephone']) > 32)) {
-      		$this->error['telephone'] = $this->language->get('error_telephone');
-    	}
+//    	if ((utf8_strlen($this->request->post['config_telephone']) < 3) || (utf8_strlen($this->request->post['config_telephone']) > 32)) {
+//      		$this->error['telephone'] = $this->language->get('error_telephone');
+//    	}
 
 		if (!$this->request->post['config_meta_title']) {
 			$this->error['meta_title'] = $this->language->get('error_meta_title');
