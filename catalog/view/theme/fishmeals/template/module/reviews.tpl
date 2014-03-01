@@ -1,3 +1,4 @@
+<?php if (!empty($reviews)) { ?>
 <div class="module module-reviews">
     <h3><?php echo $heading_title; ?></h3>
     <div class="row review-layout">
@@ -24,3 +25,4 @@
       <?php } ?>
     </div>
 </div>
+<?php } ?>

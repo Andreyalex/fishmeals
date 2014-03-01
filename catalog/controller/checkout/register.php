@@ -168,9 +168,9 @@ class ControllerCheckoutRegister extends Controller {
 				$json['error']['telephone'] = $this->language->get('error_telephone');
 			}
 
-			if ((utf8_strlen($this->request->post['address_1']) < 3) || (utf8_strlen($this->request->post['address_1']) > 128)) {
-				$json['error']['address_1'] = $this->language->get('error_address_1');
-			}
+//			if ((utf8_strlen($this->request->post['address_1']) < 3) || (utf8_strlen($this->request->post['address_1']) > 128)) {
+//				$json['error']['address_1'] = $this->language->get('error_address_1');
+//			}
 
 			if ((utf8_strlen($this->request->post['city']) < 2) || (utf8_strlen($this->request->post['city']) > 128)) {
 				$json['error']['city'] = $this->language->get('error_city');
@@ -180,9 +180,9 @@ class ControllerCheckoutRegister extends Controller {
 
 			$country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
 
-			if ($country_info && $country_info['postcode_required'] && (utf8_strlen($this->request->post['postcode']) < 2 || utf8_strlen($this->request->post['postcode']) > 10)) {
-				$json['error']['postcode'] = $this->language->get('error_postcode');
-			}
+//			if ($country_info && $country_info['postcode_required'] && (utf8_strlen($this->request->post['postcode']) < 2 || utf8_strlen($this->request->post['postcode']) > 10)) {
+//				$json['error']['postcode'] = $this->language->get('error_postcode');
+//			}
 
 			if ($this->request->post['country_id'] == '') {
 				$json['error']['country'] = $this->language->get('error_country');
@@ -230,11 +230,11 @@ class ControllerCheckoutRegister extends Controller {
 		}
 
 		if (!$json) {
-			$csutomer_id = $this->model_account_customer->addCustomer($this->request->post);
+			$customer_id = $this->model_account_customer->addCustomer($this->request->post);
 			
 			$this->session->data['account'] = 'register';
 
-			if ($customer_group && !$customer_group['approval']) {
+			if (!empty($customer_group) && !$customer_group['approval']) {
 				$this->customer->login($this->request->post['email'], $this->request->post['password']);
 
 				// Default Payment Address

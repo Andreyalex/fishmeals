@@ -18,7 +18,7 @@
                 </div>
             <?php } ?>
             <div class="button-group" class="col-xs-12">
-                <button style="width:100%" type="button" onclick="addToCart('64');"><i class="fa fa-shopping-cart"></i> <span>Купить</span></button>
+                <button style="width:100%" type="button" onclick="addToCart('<?php echo $product['product_id']; ?>');"><i class="fa fa-shopping-cart"></i> <span>Купить</span></button>
             </div>
         </div>
       </div>

@@ -145,10 +145,11 @@
           </ul>
 
           <?php
+          $totalCount = 0;
           $optionsRes = array();
-          $ops = array();
           $hiddenFields = array();
           foreach($options as $option) {
+              $totalCount += count($option['product_option_value']);
               if (in_array($option['type'], array('radio', 'checkbox'))) {
                   $hiddenFields[] = '<input id="input-option'.$option['product_option_id'].'" type="hidden" name="option['.$option['product_option_id'].']" value="" />';
                   $optionsRes[] = $option;
@@ -175,7 +176,7 @@
               return $res;
           }
 
-          $optionsFlat = cartesianProd($optionsRes);
+          $optionsFlat = !empty($optionsRes)? cartesianProd($optionsRes) : array();
           ?>
 
           <?php if (empty($optionsRes) && $price) { ?>
@@ -218,7 +219,7 @@
               <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
             <?php } ?>
 
-            <?php if ($options) { ?>
+            <?php if ($totalCount > 0) { ?>
             <hr>
             <h3><?php echo $text_option; ?></h3>
 
