@@ -145,18 +145,38 @@
           </ul>
 
           <?php
-          $opsCntTotal = 1;
+          $totalCount = 0;
           $optionsRes = array();
-          $ops = array();
           $hiddenFields = array();
           foreach($options as $option) {
+              $totalCount += count($option['product_option_value']);
               if (in_array($option['type'], array('radio', 'checkbox'))) {
-                  reset($option['product_option_value']);
-                  $opsCntTotal *= count($option['product_option_value']);
                   $hiddenFields[] = '<input id="input-option'.$option['product_option_id'].'" type="hidden" name="option['.$option['product_option_id'].']" value="" />';
                   $optionsRes[] = $option;
               }
           }
+
+          function cartesianProd(&$options, &$res = array(), &$item = array(), $idx = 0)
+          {
+              foreach($options[$idx]['product_option_value'] as $value) {
+
+                  $value['option'] = array(
+                      'name' => $options[$idx]['name'],
+                      'product_option_id' => $options[$idx]['product_option_id']
+                  );
+                  $item[$idx] = $value;
+
+                  if ($idx < count($options)-1) {
+                    cartesianProd($options, $res, $item, $idx + 1);
+                  } else {
+                      $res[] = $item;
+                  }
+              }
+
+              return $res;
+          }
+
+          $optionsFlat = !empty($optionsRes)? cartesianProd($optionsRes) : array();
           ?>
 
           <?php if (empty($optionsRes) && $price) { ?>
@@ -199,7 +219,7 @@
               <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
             <?php } ?>
 
-            <?php if ($options) { ?>
+            <?php if ($totalCount > 0) { ?>
             <hr>
             <h3><?php echo $text_option; ?></h3>
 
@@ -279,7 +299,7 @@
             <div style="overflow: hidden">
 
             <?php
-            for($i = 0; $i < $opsCntTotal; $i++) {
+            foreach($optionsFlat as $row) {
                 $buyButtonRendered = true;
                 $priceDiff = 0;
                 ?>
@@ -288,39 +308,19 @@
                     <div class="options-custom" style="overflow:hidden;">
 
                 <?php
-                foreach($optionsRes as $id => &$option) {
-
-                    $optionValues = &$option['product_option_value'];
-                    $option_value = current($optionValues);
+                foreach($row as &$option_value) {
+                    $option = $option_value['option'];
                     $html =
-                        $option['name'] . ' ' . strtolower($option_value['name']).
+                        $option['name'] . ' ' . $option_value['name'].
                         '<span class="option-value" data-option="option['.$option['product_option_id'].']" data-value="'.$option_value['product_option_value_id'].'"></span>';
-
                     $priceDiff += floatval($option_value['price_prefix'].$option_value['price']);
-
-                    // If it a last in options
-                    if ($id == count($optionsRes) - 1) {
-
-                        // If it a last value in current option
-                        if(key($optionValues) == count($optionValues) - 1) {
-
-                            reset($optionValues);
-                            if ($id > 0) {
-                                // Increment the pointer of the previous option
-                                next($optionsRes[$id-1]['product_option_value']);
-                            }
-
-                        } else {
-                            next($optionValues);
-                        }
-                    }
 
                     echo '<div>'.$html.'</div>';
                 }
                 ?></div><?php
                 ?><div class="price-custom">
                     <h3 style="text-align:right;margin-top:0;margin-bottom:2px"><?php echo (floatval($price) + $priceDiff) . ' грн' ?></h3>
-                    <button type="button" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary button-cart" onclick="$('#color-radio-buy').val(<?php echo $option_value['product_option_value_id']; ?>)" style="width: 150px;"><?php echo $button_cart; ?></button>
+                    <button type="button" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary button-cart" style="width: 150px;"><?php echo $button_cart; ?></button>
                   </div>
                 </div>
                 <?php

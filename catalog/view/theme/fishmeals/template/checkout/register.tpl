@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6 col-sm-offset-3">
     <fieldset>
       <legend><?php echo $text_your_details; ?></legend>
       <div class="form-group" style="display: <?php echo (count($customer_groups) > 1 ? 'block' : 'none'); ?>;">
@@ -36,6 +36,22 @@
         <label class="control-label" for="input-payment-telephone"><?php echo $entry_telephone; ?></label>
         <input type="text" name="telephone" value="" placeholder="<?php echo $entry_telephone; ?>" id="input-payment-telephone" class="form-control" />
       </div>
+      <input type="hidden" name="company" value="" id="input-payment-company" />
+      <input type="hidden" name="address_1" value="" id="input-payment-address-1" />
+      <input type="hidden" name="address_2" value="" id="input-payment-address-2" />
+
+      <input type="hidden" name="postcode" value="" id="input-payment-postcode" />
+      <input type="hidden" name="country_id" value="220" id="input-payment-country" />
+
+      <div class="form-group required">
+        <label class="control-label" for="input-payment-zone"><?php echo $entry_zone;; ?></label>
+        <select name="zone_id" id="input-payment-zone" class="form-control">
+        </select>
+      </div>
+      <div class="form-group required">
+        <label class="control-label" for="input-payment-city">Населенный пункт</label>
+        <input type="text" name="city" value="" placeholder="<?php echo $entry_city; ?>" id="input-payment-city" class="form-control" />
+      </div>
     </fieldset>
     <fieldset>
       <legend><?php echo $text_your_password; ?></legend>
@@ -46,49 +62,6 @@
       <div class="form-group required">
         <label class="control-label" for="input-payment-confirm"><?php echo $entry_confirm; ?></label>
         <input type="password" name="confirm" value="" placeholder="<?php echo $entry_confirm; ?>" id="input-payment-confirm" class="form-control" />
-      </div>
-    </fieldset>
-  </div>
-  <div class="col-sm-6">
-    <fieldset>
-      <legend><?php echo $text_your_address; ?></legend>
-      <div class="form-group">
-        <label class="control-label" for="input-payment-company"><?php echo $entry_company; ?></label>
-        <input type="text" name="company" value="" placeholder="<?php echo $entry_company; ?>" id="input-payment-company" class="form-control" />
-      </div>
-      <div class="form-group required">
-        <label class="control-label" for="input-payment-address-1"><?php echo $entry_address_1; ?></label>
-        <input type="text" name="address_1" value="" placeholder="<?php echo $entry_address_1; ?>" id="input-payment-address-1" class="form-control" />
-      </div>
-      <div class="form-group">
-        <label class="control-label" for="input-payment-address-2"><?php echo $entry_address_2; ?></label>
-        <input type="text" name="address_2" value="" placeholder="<?php echo $entry_address_2; ?>" id="input-payment-address-2" class="form-control" />
-      </div>
-      <div class="form-group required">
-        <label class="control-label" for="input-payment-city"><?php echo $entry_city; ?></label>
-        <input type="text" name="city" value="" placeholder="<?php echo $entry_city; ?>" id="input-payment-city" class="form-control" />
-      </div>
-      <div class="form-group required">
-        <label class="control-label" for="input-payment-postcode"><?php echo $entry_postcode; ?></label>
-        <input type="text" name="postcode" value="" placeholder="<?php echo $entry_postcode; ?>" id="input-payment-postcode" class="form-control" />
-      </div>
-      <div class="form-group required">
-        <label class="control-label" for="input-payment-country"><?php echo $entry_country; ?></label>
-        <select name="country_id" id="input-payment-country" class="form-control">
-          <option value=""><?php echo $text_select; ?></option>
-          <?php foreach ($countries as $country) { ?>
-          <?php if ($country['country_id'] == $country_id) { ?>
-          <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
-          <?php } else { ?>
-          <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
-          <?php } ?>
-          <?php } ?>
-        </select>
-      </div>
-      <div class="form-group required">
-        <label class="control-label" for="input-payment-zone"><?php echo $entry_zone;; ?></label>
-        <select name="zone_id" id="input-payment-zone" class="form-control">
-        </select>
       </div>
     </fieldset>
     <?php foreach ($custom_fields as $custom_field) { ?>
@@ -169,34 +142,39 @@
     </div>
     <?php } ?>
     <?php } ?>
+    <div class="checkbox">
+      <label for="newsletter">
+        <input type="checkbox" name="newsletter" value="1" id="newsletter" />
+        <?php echo $entry_newsletter; ?></label>
+    </div>
+    <?php if ($shipping_required) { ?>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="shipping_address" value="1" checked="checked" />
+        <?php echo $entry_shipping; ?>
+      </label>
+    </div>
+    <?php } ?>
+    <?php if ($text_agree) { ?>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="agree" value="1" />
+        <?php echo $text_agree; ?>
+      </label>
+      <div class="pull-right">
+        <input type="button" value="<?php echo $button_continue; ?>" id="button-register" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
+      </div>
+    </div>
+    <?php } else { ?>
+    <div class="checkbox">
+      <div class="pull-right">
+        <input type="button" value="<?php echo $button_continue; ?>" id="button-register" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
+      </div>
+    </div>
+    <?php } ?>
   </div>
 </div>
-<div class="checkbox">
-  <label for="newsletter">
-    <input type="checkbox" name="newsletter" value="1" id="newsletter" />
-    <?php echo $entry_newsletter; ?></label>
-</div>
-<?php if ($shipping_required) { ?>
-<div class="checkbox">
-  <label>
-    <input type="checkbox" name="shipping_address" value="1" checked="checked" />
-    <?php echo $entry_shipping; ?></label>
-</div>
-<?php } ?>
-<?php if ($text_agree) { ?>
-<div class="buttons clearfix">
-  <div class="pull-right"><?php echo $text_agree; ?> &nbsp;
-    <input type="checkbox" name="agree" value="1" />
-    <input type="button" value="<?php echo $button_continue; ?>" id="button-register" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
-  </div>
-</div>
-<?php } else { ?>
-<div class="buttons clearfix">
-  <div class="pull-right">
-    <input type="button" value="<?php echo $button_continue; ?>" id="button-register" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
-  </div>
-</div>
-<?php } ?>
+
 <script type="text/javascript"><!--
 $('#collapse-payment-address input[name=\'customer_group_id\']').on('change', function() {
 	$.ajax({
@@ -227,12 +205,12 @@ $('#collapse-payment-address input[name=\'customer_group_id\']').on('change', fu
 $('#collapse-payment-address input[name=\'customer_group_id\']:checked').trigger('change');
 //--></script> 
 <script type="text/javascript"><!--
-$('#collapse-payment-address select[name=\'country_id\']').on('change', function() {
+$('#collapse-payment-address [name=\'country_id\']').on('change', function() {
 	$.ajax({
         url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
         dataType: 'json',
         beforeSend: function() {
-			$('#collapse-payment-address select[name=\'country_id\']').after(' <i class="fa fa-spinner fa-spin"></i>');
+			$('#collapse-payment-address [name=\'country_id\']').after(' <i class="fa fa-spinner fa-spin"></i>');
         },
         complete: function() {
 			$('.fa-spinner').remove();
@@ -268,7 +246,7 @@ $('#collapse-payment-address select[name=\'country_id\']').on('change', function
     });
 });
 
-$('#collapse-payment-address select[name=\'country_id\']').trigger('change');
+$('#collapse-payment-address [name=\'country_id\']').trigger('change');
 //--></script> 
 <script type="text/javascript"><!--
 $('#collapse-payment-address button[id^=\'button-payment-custom-field\']').on('click', function() {
