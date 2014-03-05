@@ -24,68 +24,61 @@
 </style>
   <?php foreach ($orders as $order) { ?>
   <div style="page-break-after: auto;">
-    <h1><?php echo $text_invoice; ?> #<?php echo $order['order_id']; ?></h1>
-    <table class="table table-striped table-bordered">
-      <thead>
-        <tr>
-          <td colspan="2"><?php echo $text_order_detail; ?></td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="width: 50%;"><address>
-            <strong><?php echo $order['store_name']; ?></strong><br />
-            <?php echo $order['store_address']; ?>
-            </address>
-            <b><?php echo $text_telephone; ?></b> <?php echo $order['store_telephone']; ?><br />
-            <?php if ($order['store_fax']) { ?>
-            <b><?php echo $text_fax; ?></b> <?php echo $order['store_fax']; ?><br />
-            <?php } ?>
-            <b><?php echo $text_email; ?></b> <?php echo $order['store_email']; ?><br />
-            <b><?php echo $text_website; ?></b> <a href="<?php echo $order['store_url']; ?>"><?php echo $order['store_url']; ?></a></td>
-          <td style="width: 50%;"><b><?php echo $text_date_added; ?></b> <?php echo $order['date_added']; ?><br />
-            <?php if ($order['invoice_no']) { ?>
-            <b><?php echo $text_invoice_no; ?></b> <?php echo $order['invoice_no']; ?><br />
-            <?php } ?>
-            <b><?php echo $text_order_id; ?></b> <?php echo $order['order_id']; ?><br />
-            <b><?php echo $text_payment_method; ?></b> <?php echo $order['payment_method']; ?><br />
+
+      <table class="table table-striped table-bordered" style="margin-left:40%">
+          <tbody>
+             <tr>
+                <td><?php echo $text_date_added; ?></td>
+                <td><b><?php echo $order['date_added']; ?></b></td>
+            </tr>
+            <tr>
+                <td><?php echo $text_payment_method; ?></td>
+                <td><b><?php echo $order['payment_method']; ?></b></td>
+            </tr>
             <?php if ($order['shipping_method']) { ?>
-            <b><?php echo $text_shipping_method; ?></b> <?php echo $order['shipping_method']; ?><br />
-            <?php } ?></td>
-        </tr>
-      </tbody>
-    </table>
+            <tr>
+                <td><?php echo $text_shipping_method; ?></td>
+                <td><b><?php echo $order['shipping_method']; ?></b></td>
+            </tr>
+             <?php } ?>
+          </tbody>
+      </table>
+
+      <table class="table table-striped table-bordered">
+          <thead>
+              <tr>
+                  <td colspan="2">Данные о клиенте</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>ФИО</td>
+                  <td><?php echo $order['customer_name']; ?></td>
+              </tr>
+              <tr>
+                  <td>Адрес</td>
+                  <td><?php echo $order['customer_address']; ?></td>
+              </tr>
+          </tbody>
+      </table>
+
+      <h1><?php echo $text_invoice; ?> #<?php echo $order['order_id']; ?></h1>
+
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
-          <td style="width: 50%;"><b><?php echo $text_to; ?></b></td>
-          <td style="width: 50%;"><b><?php echo $text_ship_to; ?></b></td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><address>
-            <?php echo $order['payment_address']; ?>
-            </address></td>
-          <td><address>
-            <?php echo $order['shipping_address']; ?>
-            </address></td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="table table-striped table-bordered">
-      <thead>
-        <tr>
-          <td><b><?php echo $column_product; ?></b></td>
+          <td><b>№</b></td>
+          <td><b>Наименование</b></td>
           <td><b><?php echo $column_model; ?></b></td>
-          <td class="text-right"><b><?php echo $column_quantity; ?></b></td>
-          <td class="text-right"><b><?php echo $column_price; ?></b></td>
-          <td class="text-right"><b><?php echo $column_total; ?></b></td>
+          <td class="text-right"><b>Кол-во</b></td>
+          <td class="text-right"><b>Цена</b></td>
+          <td class="text-right"><b>Сумма</b></td>
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($order['product'] as $product) { ?>
+        <?php $i=0; foreach ($order['product'] as $product) { $i++; ?>
         <tr>
+          <td><?php echo $i; ?></td>
           <td><?php echo $product['name']; ?>
             <?php foreach ($product['option'] as $option) { ?>
             <br />
@@ -101,6 +94,7 @@
         <tr>
           <td><?php echo $voucher['description']; ?></td>
           <td></td>
+          <td></td>
           <td class="text-right">1</td>
           <td class="text-right"><?php echo $voucher['amount']; ?></td>
           <td class="text-right"><?php echo $voucher['amount']; ?></td>
@@ -108,7 +102,7 @@
         <?php } ?>
         <?php foreach ($order['total'] as $total) { ?>
         <tr>
-          <td class="text-right" colspan="4"><b><?php echo $total['title']; ?></b></td>
+          <td class="text-right" colspan="5"><b><?php echo $total['title']; ?></b></td>
           <td class="text-right"><?php echo $total['text']; ?></td>
         </tr>
         <?php } ?>

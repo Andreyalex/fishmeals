@@ -2371,7 +2371,15 @@ class ControllerSaleOrder extends Controller {
 
 				$shipping_address = str_replace(array("\r\n", "\r", "\n"), '<br />', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '<br />', trim(str_replace($find, $replace, $format))));
 
-				$product_data = array();
+                $customer_name = $order_info['shipping_firstname'] . ' ' .  $order_info['shipping_lastname'];
+
+                $customer_address =
+                    (!empty($order_info['shipping_address_1'])? $order_info['shipping_address_1'].' ' : '') .
+                    (!empty($order_info['shipping_address_2'])? $order_info['shipping_address_2'].', ' : '') .
+                    (!empty($order_info['shipping_city'])? $order_info['shipping_city'].', ' : '') .
+                    (!empty($order_info['shipping_zone'])? $order_info['shipping_zone'] : '');
+
+                $product_data = array();
 
 				$products = $this->model_sale_order->getOrderProducts($order_id);
 
@@ -2425,7 +2433,9 @@ class ControllerSaleOrder extends Controller {
 					);				
 				}
 
-				$data['orders'][] = array(
+                $pm = explode('<br/>', $order_info['payment_method']);
+
+                $data['orders'][] = array(
 					'order_id'	         => $order_id,
 					'invoice_no'         => $invoice_no,
 					'date_added'         => date($this->language->get('date_format_short'), strtotime($order_info['date_added'])),
@@ -2440,12 +2450,16 @@ class ControllerSaleOrder extends Controller {
 					'shipping_address'   => $shipping_address,
 					'shipping_method'    => $order_info['shipping_method'],
 					'payment_address'    => $payment_address,
-					'payment_method'     => $order_info['payment_method'],
+                    'customer_name'      => $customer_name,
+                    'customer_address'   => $customer_address,
+					'payment_method'     => $pm[0],
 					'product'            => $product_data,
 					'voucher'            => $voucher_data,
 					'total'              => $total_data,
 					'comment'            => nl2br($order_info['comment'])
 				);
+
+
 			}
 		}
 
