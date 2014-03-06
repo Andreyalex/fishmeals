@@ -707,7 +707,16 @@ h2.price {
 
 #top-phones {
     float: left;
-    margin-left: 18%;
+    margin-left: 7%;
+}
+
+#top-open-time {
+    float: left;
+    margin-left: 6%;
+}
+
+#top-open-time .title {
+    margin-right: 10px;
 }
 
 .review-layout .review {

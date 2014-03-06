@@ -59,6 +59,7 @@
                 <?php } ?>
             <?php } ?>
         </div>
+        <div id="top-open-time"><span class="title">Режим работы:</span><span><?php echo $opentime; ?></span></div>
         <div class="pull-right">
             <a href="<?php echo $account; ?>"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span></a>
             <a href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a>
