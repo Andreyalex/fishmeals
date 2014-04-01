@@ -112,6 +112,12 @@
                 <span class="help-block"><?php echo $help_open; ?></span></div>
             </div>
             <div class="form-group">
+              <label class="col-sm-2 control-label" for="input-google_verification">Код верификации google</label>
+              <div class="col-sm-10">
+                <input name="config_google_verification" id="input-google_verification" class="form-control" value="<?php echo $config_google_verification; ?>" />
+                <span class="help-block"><?php echo $help_google_verification; ?></span></div>
+            </div>
+            <div class="form-group">
               <label class="col-sm-2 control-label" for="input-comment"><?php echo $entry_comment; ?></label>
               <div class="col-sm-10">
                 <textarea name="config_comment" rows="5"  id="input-comment" class="form-control"><?php echo $config_comment; ?></textarea>

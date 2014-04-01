@@ -277,6 +277,7 @@ class ControllerLocalisationLocation extends Controller {
 	
 		$data['help_geocode'] = $this->language->get('help_geocode');
 		$data['help_open'] = $this->language->get('help_open');
+		$data['help_google_verification'] = $this->language->get('help_google_verification');
 		$data['help_comment'] = $this->language->get('help_comment');
 		
 		$data['button_save'] = $this->language->get('button_save');

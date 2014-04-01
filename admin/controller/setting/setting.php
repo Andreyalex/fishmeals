@@ -153,6 +153,7 @@ class ControllerSettingSetting extends Controller {
 		
 		$data['help_geocode'] = $this->language->get('help_geocode');
 		$data['help_open'] = $this->language->get('help_open');
+		$data['help_google_verification'] = $this->language->get('help_google_verification');
 		$data['help_comment'] = $this->language->get('help_comment');
 		$data['help_location'] = $this->language->get('help_location');
 		$data['help_currency'] = $this->language->get('help_currency');
@@ -503,7 +504,13 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_open'] = $this->config->get('config_open');
 		}
-		
+
+        if (isset($this->request->post['config_google_verification'])) {
+            $data['config_google_verification'] = $this->request->post['config_google_verification'];
+        } else {
+            $data['config_google_verification'] = $this->config->get('config_google_verification');
+        }
+
 		if (isset($this->request->post['config_comment'])) {
 			$data['config_comment'] = $this->request->post['config_comment'];
 		} else {

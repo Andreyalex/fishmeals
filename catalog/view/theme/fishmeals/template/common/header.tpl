@@ -38,6 +38,9 @@
 <script src="<?php echo $script; ?>" type="text/javascript"></script>
 <?php } ?>
 <?php echo $google_analytics; ?>
+<?php if (!empty($google_verification)) { ?>
+<meta name="google-site-verification" content="<?php echo $google_verification ?>" />
+<?php } ?>
 </head>
 <body class="<?php echo $class; ?>">
 <nav id="top">
