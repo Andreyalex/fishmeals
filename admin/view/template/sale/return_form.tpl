@@ -28,7 +28,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-order-id"><?php echo $entry_order_id; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="order_id" value="<?php echo $order_id; ?>" placeholder="<?php echo $entry_order_id; ?>" id="input-order-id" class="form-control" />
+                <input type="text" name="order_id" value="<?php echo $order_id; ?>"  id="input-order-id" class="form-control" />
                 <?php if ($error_order_id) { ?>
                 <div class="text-danger"><?php echo $error_order_id; ?></div>
                 <?php } ?>
@@ -37,20 +37,20 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-date-ordered"><?php echo $entry_date_ordered; ?></label>
               <div class="col-sm-3">
-                <input type="date" name="date_ordered" value="<?php echo $date_ordered; ?>" placeholder="<?php echo $entry_date_ordered; ?>" id="input-date-ordered" class="form-control" />
+                <input type="date" name="date_ordered" value="<?php echo $date_ordered; ?>"  id="input-date-ordered" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-customer"><?php echo $entry_customer; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="customer" value="<?php echo $customer; ?>" placeholder="<?php echo $entry_customer; ?>" id="input-customer" class="form-control" />
+                <input type="text" name="customer" value="<?php echo $customer; ?>"  id="input-customer" class="form-control" />
                 <input type="hidden" name="customer_id" value="<?php echo $customer_id; ?>" />
               </div>
             </div>
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-firstname"><?php echo $entry_firstname; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="<?php echo $entry_firstname; ?>" id="input-firstname" class="form-control" />
+                <input type="text" name="firstname" value="<?php echo $firstname; ?>"  id="input-firstname" class="form-control" />
                 <?php if ($error_firstname) { ?>
                 <div class="text-danger"><?php echo $error_firstname; ?></div>
                 <?php } ?>
@@ -59,7 +59,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-lastname"><span class="">*</span> <?php echo $entry_lastname; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
+                <input type="text" name="lastname" value="<?php echo $lastname; ?>"  id="input-lastname" class="form-control" />
                 <?php if ($error_lastname) { ?>
                 <div class="text-danger"><?php echo $error_lastname; ?></div>
                 <?php } ?>
@@ -68,7 +68,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+                <input type="text" name="email" value="<?php echo $email; ?>"  id="input-email" class="form-control" />
                 <?php if ($error_email) { ?>
                 <div class="text-danger"><?php echo $error_email; ?></div>
                 <?php  } ?>
@@ -77,7 +77,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_telephone; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
+                <input type="text" name="telephone" value="<?php echo $telephone; ?>"  id="input-telephone" class="form-control" />
                 <?php if ($error_telephone) { ?>
                 <div class="text-danger"><?php echo $error_telephone; ?></div>
                 <?php  } ?>
@@ -88,7 +88,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-product"><?php echo $entry_product; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="product" value="<?php echo $product; ?>" placeholder="<?php echo $entry_product; ?>" id="input-product" class="form-control" />
+                <input type="text" name="product" value="<?php echo $product; ?>"  id="input-product" class="form-control" />
                 <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
                 <span class="help-block"><?php echo $help_product; ?></span>
                 <?php if ($error_product) { ?>
@@ -99,13 +99,13 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-model"><?php echo $entry_model; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="model" value="<?php echo $model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
+                <input type="text" name="model" value="<?php echo $model; ?>"  id="input-model" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-quantity"><?php echo $entry_quantity; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="quantity" value="<?php echo $quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
+                <input type="text" name="quantity" value="<?php echo $quantity; ?>"  id="input-quantity" class="form-control" />
               </div>
             </div>
             <div class="form-group">
@@ -139,7 +139,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-comment"><?php echo $entry_comment; ?></label>
               <div class="col-sm-10">
-                <textarea name="comment" rows="5" placeholder="<?php echo $entry_comment; ?>" id="input-comment" class="form-control"><?php echo $comment; ?></textarea>
+                <textarea name="comment" rows="5"  id="input-comment" class="form-control"><?php echo $comment; ?></textarea>
               </div>
             </div>
             <div class="form-group">

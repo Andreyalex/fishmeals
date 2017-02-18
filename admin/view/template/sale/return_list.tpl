@@ -28,27 +28,27 @@
           <div class="col-sm-3">
             <div class="form-group">
               <label class="control-label" for="input-return-id"><?php echo $entry_return_id; ?></label>
-              <input type="text" name="filter_return_id" value="<?php echo $filter_return_id; ?>" placeholder="<?php echo $entry_return_id; ?>" id="input-return-id" class="form-control" />
+              <input type="text" name="filter_return_id" value="<?php echo $filter_return_id; ?>"  id="input-return-id" class="form-control" />
             </div>
             <div class="form-group">
               <label class="control-label" for="input-order-id"><?php echo $entry_order_id; ?></label>
-              <input type="text" name="filter_order_id" value="<?php echo $filter_order_id; ?>" placeholder="<?php echo $entry_order_id; ?>" id="input-order-id" class="form-control" />
+              <input type="text" name="filter_order_id" value="<?php echo $filter_order_id; ?>"  id="input-order-id" class="form-control" />
             </div>
           </div>
           <div class="col-sm-3">
             <div class="form-group">
               <label class="control-label" for="input-customer"><?php echo $entry_customer; ?></label>
-              <input type="text" name="filter_customer" value="<?php echo $filter_customer; ?>" placeholder="<?php echo $entry_customer; ?>" id="input-customer" class="form-control" />
+              <input type="text" name="filter_customer" value="<?php echo $filter_customer; ?>"  id="input-customer" class="form-control" />
             </div>
             <div class="form-group">
               <label class="control-label" for="input-product"><?php echo $entry_product; ?></label>
-              <input type="text" name="filter_product" value="<?php echo $filter_product; ?>" placeholder="<?php echo $entry_product; ?>" id="input-product" class="form-control" />
+              <input type="text" name="filter_product" value="<?php echo $filter_product; ?>"  id="input-product" class="form-control" />
             </div>
           </div>
           <div class="col-sm-3">
             <div class="form-group">
               <label class="control-label" for="input-model"><?php echo $entry_model; ?></label>
-              <input type="text" name="filter_model" value="<?php echo $filter_model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
+              <input type="text" name="filter_model" value="<?php echo $filter_model; ?>"  id="input-model" class="form-control" />
             </div>
             <div class="form-group">
               <label class="control-label" for="input-return-status"><?php echo $entry_return_status; ?></label>
@@ -67,11 +67,11 @@
           <div class="col-sm-3">
             <div class="form-group">
               <label class="control-label" for="input-date-added"><?php echo $entry_date_added; ?></label>
-              <input type="date" name="filter_date_added" value="<?php echo $filter_date_added; ?>" placeholder="<?php echo $entry_date_added; ?>" id="input-date-added" class="form-control" />
+              <input type="date" name="filter_date_added" value="<?php echo $filter_date_added; ?>"  id="input-date-added" class="form-control" />
             </div>
             <div class="form-group">
               <label class="control-label" for="input-date-modified"><?php echo $entry_date_modified; ?></label>
-              <input type="date" name="filter_date_modified" value="<?php echo $filter_date_modified; ?>" placeholder="<?php echo $entry_date_modified; ?>" id="input-date-modified" class="form-control" />
+              <input type="date" name="filter_date_modified" value="<?php echo $filter_date_modified; ?>"  id="input-date-modified" class="form-control" />
             </div>
             <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
           </div>

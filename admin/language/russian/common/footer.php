@@ -1,4 +1,4 @@
 <?php
 // Text
-$_['text_footer'] = '<a href=http://www.opencart.com>OpenCart</a> &copy; 2009-' . date('Y') . ' All Rights Reserved.Версия %s';
-?>
+$_['text_footer'] = 'Powered by Opencart v2.0 (updated and fixed by Andreyalek)';
+

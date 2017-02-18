@@ -104,31 +104,52 @@ class Image {
 	}
 
 	public function watermark($file, $position = 'bottomright') {
-		$watermark = $this->create($file);
+
+        $info = getimagesize($file);
+        $mime = $info['mime'];
+        if ($mime == 'image/gif') {
+            $watermark = imagecreatefromgif($file);
+        } elseif ($mime == 'image/png') {
+            $watermark = imagecreatefrompng($file);
+        } elseif ($mime == 'image/jpeg') {
+            $watermark = imagecreatefromjpeg($file);
+        }
 
 		$watermark_width = imagesx($watermark);
 		$watermark_height = imagesy($watermark);
 
+        $watermark_width_new = (int) $this->info['width'] / 2.5;
+        $watermark_resize_scale = $watermark_width_new / $watermark_width;
+        $watermark_height_new = $watermark_height * $watermark_resize_scale;
+
+        $padding = $this->info['width'] / 30;
+
 		switch($position) {
 			case 'topleft':
-				$watermark_pos_x = 0;
-				$watermark_pos_y = 0;
+				$watermark_pos_x = $padding;
+				$watermark_pos_y = $padding;
 				break;
 			case 'topright':
-				$watermark_pos_x = $this->info['width'] - $watermark_width;
-				$watermark_pos_y = 0;
+				$watermark_pos_x = $this->info['width'] - $watermark_width_new - $padding;
+				$watermark_pos_y = $padding;
 				break;
 			case 'bottomleft':
-				$watermark_pos_x = 0;
-				$watermark_pos_y = $this->info['height'] - $watermark_height;
+				$watermark_pos_x = $padding;
+				$watermark_pos_y = $this->info['height'] - $watermark_height_new - $padding;
 				break;
 			case 'bottomright':
-				$watermark_pos_x = $this->info['width'] - $watermark_width;
-				$watermark_pos_y = $this->info['height'] - $watermark_height;
+				$watermark_pos_x = $this->info['width'] - $watermark_width_new - $padding;
+				$watermark_pos_y = $this->info['height'] - $watermark_height_new - $padding;
 				break;
 		}
 
-		imagecopy($this->image, $watermark, $watermark_pos_x, $watermark_pos_y, 0, 0, 120, 40);
+        imagecopyresized(
+            $this->image, $watermark,
+            $watermark_pos_x, $watermark_pos_y,
+            0, 0,
+            $watermark_width_new, $watermark_height_new,
+            $watermark_width, $watermark_height
+        );
 
 		imagedestroy($watermark);
 	}

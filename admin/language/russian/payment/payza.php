@@ -3,21 +3,23 @@
 $_['heading_title']      = 'Payza';
 
 // Text 
-$_['text_payment']       = 'Оплата';
-$_['text_success']       = 'Настройки модуля обновлены!';
+$_['text_payment']       = 'Payment';
+$_['text_success']       = 'Success: You have modified Payza account details!';
       
 // Entry
 $_['entry_merchant']     = 'Merchant ID:';
 $_['entry_security']     = 'Security Code:';
-$_['entry_callback']     = 'Alert URL:Это должно быть установлено в панели управления Payza. Вам также понадобится проверить, чтобы IPN Status было включено.';
-$_['entry_total']        = 'Минимальная сумма заказа:Сумма заказа, после достижения которой данный способ станет доступен.';
-$_['entry_order_status'] = 'Статус заказа:';
-$_['entry_geo_zone']     = 'Географическая зона:';
-$_['entry_status']       = 'Статус:';
-$_['entry_sort_order']   = 'Порядок сортировки:';
+$_['entry_callback']     = 'Alert URL:<br /><span class="help">This has to be set in the Payza control panel. You will also need to check the "IPN Status" to enabled.</span>';
+$_['entry_total']        = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
+$_['entry_order_status'] = 'Order Status:';
+$_['entry_geo_zone']     = 'Geo Zone:';
+$_['entry_status']       = 'Status:';
+$_['entry_sort_order']   = 'Sort Order:';
 
 // Error
-$_['error_permission']   = 'У Вас нет прав для управления этим модулем!';
-$_['error_merchant']     = 'Отсутствует Merchant ID!';
-$_['error_security']     = 'Отсутствует Security Code!';
-?>
+$_['error_permission']   = 'Warning: You do not have permission to modify payment Payza!';
+$_['error_merchant']     = 'Merchant ID Required!';
+$_['error_security']     = 'Security Code Required!';
+
+$_['help_callback'] = 'This has to be set in the Payza control panel. You will also need to check the "IPN Status" to enabled.';
+$_['help_total'] = 'The checkout total the order must reach before this payment method becomes active.';

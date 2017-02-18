@@ -2,22 +2,25 @@
 // Heading
 $_['heading_title']      = 'Paymate';
 
-// Text
-$_['text_payment']       = 'Оплата';
-$_['text_success']       = 'Настройки модуля обновлены!';
+// Text 
+$_['text_payment']       = 'Payment';
+$_['text_success']       = 'Success: You have modified Paymate account details!';
 
 // Entry
-$_['entry_username']     = 'Имя пользователя Paymate:';
-$_['entry_password']     = 'Пароль:Он будет использоваться для того, чтобы быть уверенными в неизменности информации, отправленной платежному шлюзу.';
-$_['entry_test']         = 'Тестовый режим:';
-$_['entry_total']        = 'Минимальная сумма заказа:Сумма заказа, после достижения которой данный способ станет доступен.';
-$_['entry_order_status'] = 'Статус заказа:';
-$_['entry_geo_zone']     = 'Географическая зона:';
-$_['entry_status']       = 'Статус:';
-$_['entry_sort_order']	 = 'Порядок сортировки:';
+$_['entry_username']     = 'Paymate Username:';
+$_['entry_password']     = 'Password:<br /><span class="help">Just use some random password. This will be used to make sure the payment information is not interfered with after being sent to the payment gateway.</span>';
+$_['entry_test']         = 'Test Mode:';
+$_['entry_total']        = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
+$_['entry_order_status'] = 'Order Status:';
+$_['entry_geo_zone']     = 'Geo Zone:';
+$_['entry_status']       = 'Status:';
+$_['entry_sort_order']   = 'Sort Order:';
 
 // Error
-$_['error_permission']   = 'У Вас нет прав для управления этим модулем!';
-$_['error_username']     = 'Имя пользователя Paymate не указано!';
-$_['error_password']     = 'Не указан пароль!';
-?>
+$_['error_permission']   = 'Warning: You do not have permission to modify payment Paymate!';
+$_['error_username']     = 'Paymate Username required!';
+$_['error_password']     = 'Password required!';
+
+
+$_['help_password'] = 'Just use some random password. This will be used to make sure the payment information is not interfered with after being sent to the payment gateway.';
+$_['help_total'] = 'The checkout total the order must reach before this payment method becomes active.';

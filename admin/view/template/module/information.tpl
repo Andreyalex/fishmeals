@@ -73,7 +73,7 @@
                   <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
                   <?php } ?>
                 </select></td>
-              <td class="text-right"><input type="text" name="information_module[<?php echo $module_row; ?>][sort_order]" value="<?php echo $module['sort_order']; ?>" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>
+              <td class="text-right"><input type="text" name="information_module[<?php echo $module_row; ?>][sort_order]" value="<?php echo $module['sort_order']; ?>"  class="form-control" /></td>
               <td class="text-left"><button type="button" onclick="$('#module-row<?php echo $module_row; ?>').remove();" class="btn btn-danger"><i class="fa fa-minus-circle"></i> <?php echo $button_remove; ?></button></td>
             </tr>
             <?php $module_row++; ?>
@@ -110,7 +110,7 @@ function addModule() {
     html += '    <option value="1" selected="selected"><?php echo $text_enabled; ?></option>';
     html += '    <option value="0"><?php echo $text_disabled; ?></option>';
     html += '  </select></td>';
-	html += '  <td class="text-right"><input type="text" name="information_module[' + module_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';
+	html += '  <td class="text-right"><input type="text" name="information_module[' + module_row + '][sort_order]" value=""  class="form-control" /></td>';
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#module-row' + module_row + '\').remove();" class="btn btn-danger"><i class="fa fa-minus-circle"></i> <?php echo $button_remove; ?></button></td>';
 	html += '</tr>';
 	

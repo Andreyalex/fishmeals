@@ -47,7 +47,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-customer"><?php echo $entry_customer; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="customer" value="<?php echo $customer; ?>" placeholder="<?php echo $entry_customer; ?>" id="input-customer" class="form-control" />
+                <input type="text" name="customer" value="<?php echo $customer; ?>"  id="input-customer" class="form-control" />
                 <input type="hidden" name="customer_id" value="<?php echo $customer_id; ?>" />
                 <input type="hidden" name="customer_group_id" value="<?php echo $customer_group_id; ?>" />
               </div>

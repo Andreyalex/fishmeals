@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-postcode"><?php echo $entry_postcode; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="auspost_postcode" value="<?php echo $auspost_postcode; ?>" placeholder="<?php echo $entry_postcode; ?>" id="input-postcode" class="form-control" maxlength="4" />
+            <input type="text" name="auspost_postcode" value="<?php echo $auspost_postcode; ?>"  id="input-postcode" class="form-control" maxlength="4" />
             <?php if ($error_postcode) { ?>
             <div class="text-danger"><?php echo $error_postcode; ?></div>
             <?php } ?>
@@ -131,7 +131,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="auspost_sort_order" value="<?php echo $auspost_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="auspost_sort_order" value="<?php echo $auspost_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

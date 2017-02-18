@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-payable"><?php echo $entry_payable; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="cheque_payable" value="<?php echo $cheque_payable; ?>" placeholder="<?php echo $entry_payable; ?>" id="input-payable" class="form-control" />
+            <input type="text" name="cheque_payable" value="<?php echo $cheque_payable; ?>"  id="input-payable" class="form-control" />
             <?php if ($error_payable) { ?>
             <div class="text-danger"><?php echo $error_payable; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="cheque_total" value="<?php echo $cheque_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="cheque_total" value="<?php echo $cheque_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
@@ -80,7 +80,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="cheque_sort_order" value="<?php echo $cheque_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="cheque_sort_order" value="<?php echo $cheque_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

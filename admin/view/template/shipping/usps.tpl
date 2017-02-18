@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-user-id"><?php echo $entry_user_id; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="usps_user_id" value="<?php echo $usps_user_id; ?>" placeholder="<?php echo $entry_user_id; ?>" id="input-user-id" class="form-control" />
+            <input type="text" name="usps_user_id" value="<?php echo $usps_user_id; ?>"  id="input-user-id" class="form-control" />
             <?php if ($error_user_id) { ?>
             <div class="text-danger"><?php echo $error_user_id; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-postcode"><?php echo $entry_postcode; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="usps_postcode" value="<?php echo $usps_postcode; ?>" placeholder="<?php echo $entry_postcode; ?>" id="input-postcode" class="form-control" />
+            <input type="text" name="usps_postcode" value="<?php echo $usps_postcode; ?>"  id="input-postcode" class="form-control" />
             <?php if ($error_postcode) { ?>
             <div class="text-danger"><?php echo $error_postcode; ?></div>
             <?php } ?>
@@ -516,13 +516,13 @@
           <div class="col-sm-10">
             <div class="row">
               <div class="col-sm-4">
-                <input type="text" name="usps_length" value="<?php echo $usps_length; ?>" placeholder="<?php echo $entry_length; ?>" id="input-length" class="form-control" />
+                <input type="text" name="usps_length" value="<?php echo $usps_length; ?>"  id="input-length" class="form-control" />
               </div>
               <div class="col-sm-4">
-                <input type="text" name="usps_width" value="<?php echo $usps_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-width" class="form-control" />
+                <input type="text" name="usps_width" value="<?php echo $usps_width; ?>"  id="input-width" class="form-control" />
               </div>
               <div class="col-sm-4">
-                <input type="text" name="usps_height" value="<?php echo $usps_height; ?>" placeholder="<?php echo $entry_height; ?>" id="input-height" class="form-control" />
+                <input type="text" name="usps_height" value="<?php echo $usps_height; ?>"  id="input-height" class="form-control" />
               </div>
             </div>
             <span class="help-block"><?php echo $help_dimension; ?></span>
@@ -638,7 +638,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="usps_sort_order" value="<?php echo $usps_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="usps_sort_order" value="<?php echo $usps_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
         <div class="form-group">

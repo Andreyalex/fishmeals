@@ -22,7 +22,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-cost"><?php echo $entry_cost; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="flat_cost" value="<?php echo $flat_cost; ?>" placeholder="<?php echo $entry_cost; ?>" id="input-cost" class="form-control" />
+            <input type="text" name="flat_cost" value="<?php echo $flat_cost; ?>"  id="input-cost" class="form-control" />
           </div>
         </div>
         <div class="form-group">
@@ -72,7 +72,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="flat_sort_order" value="<?php echo $flat_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="flat_sort_order" value="<?php echo $flat_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

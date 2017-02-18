@@ -235,7 +235,8 @@ class ControllerSettingStore extends Controller {
 		$data['help_ssl'] = $this->language->get('help_ssl');
 		$data['help_geocode'] = $this->language->get('help_geocode');
 		$data['help_open'] = $this->language->get('help_open');
-		$data['help_comment'] = $this->language->get('help_comment');		
+		$data['help_google_verification'] = $this->language->get('help_google_verification');
+		$data['help_comment'] = $this->language->get('help_comment');
 		$data['help_location'] = $this->language->get('help_location');
 		$data['help_currency'] = $this->language->get('help_currency');			
 		$data['help_product_limit'] = $this->language->get('help_product_limit');
@@ -524,6 +525,14 @@ class ControllerSettingStore extends Controller {
 			$data['open'] = '';
 		}
 		
+		if (isset($this->request->post['google_verification'])) {
+			$data['google_verification'] = $this->request->post['google_verification'];
+		} elseif (isset($store_info['config_google_verification'])) {
+			$data['google_verification'] = $store_info['google_verification'];
+		} else {
+			$data['google_verification'] = '';
+		}
+
 		if (isset($this->request->post['comment'])) {
 			$data['comment'] = $this->request->post['comment'];
 		} elseif (isset($store_info['config_comment'])) {

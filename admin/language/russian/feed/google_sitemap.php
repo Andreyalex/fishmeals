@@ -2,7 +2,7 @@
 // Heading
 $_['heading_title']    = 'Google Sitemap';
 
-// Text
+// Text 
 $_['text_feed']        = 'Каналы продвижения';
 $_['text_success']     = 'Настройки модуля обновлены!';
 
@@ -12,4 +12,3 @@ $_['entry_data_feed']  = 'Адрес:';
 
 // Error
 $_['error_permission'] = 'У Вас нет прав для управления этим модулем!';
-?>

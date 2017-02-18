@@ -15,13 +15,13 @@
           <div class="col-sm-6">
             <div class="form-group">
               <label class="control-label" for="input-ip"><?php echo $entry_ip; ?></label>
-              <input type="text" name="filter_ip" value="<?php echo $filter_ip; ?>" id="input-ip" placeholder="<?php echo $entry_ip; ?>" i class="form-control" />
+              <input type="text" name="filter_ip" value="<?php echo $filter_ip; ?>" id="input-ip"  i class="form-control" />
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
               <label class="control-label" for="input-customer"><?php echo $entry_customer; ?></label>
-              <input type="text" name="filter_customer" value="<?php echo $filter_customer; ?>" placeholder="<?php echo $entry_customer; ?>" id="input-customer" class="form-control" />
+              <input type="text" name="filter_customer" value="<?php echo $filter_customer; ?>"  id="input-customer" class="form-control" />
             </div>
             <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
           </div>

@@ -3,6 +3,7 @@ class ControllerSaleOrder extends Controller {
 	private $error = array();
 
 	public function index() {
+
 		$this->load->language('sale/order');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -1377,6 +1378,7 @@ class ControllerSaleOrder extends Controller {
 			$data['entry_comment'] = $this->language->get('entry_comment');
 
 			$data['button_invoice'] = $this->language->get('button_invoice');
+            $data['button_pdf_invoice'] = $this->language->get('button_pdf_invoice');
 			$data['button_restock'] = $this->language->get('button_restock');
 			$data['button_cancel'] = $this->language->get('button_cancel');
 			$data['button_generate'] = $this->language->get('button_generate');
@@ -2225,6 +2227,7 @@ class ControllerSaleOrder extends Controller {
 	}
 
 	public function invoice() {
+
 		$this->load->language('sale/order');
 
 		$data['title'] = $this->language->get('text_invoice');
@@ -2266,13 +2269,15 @@ class ControllerSaleOrder extends Controller {
 
 		$data['orders'] = array();
 
-		$orders = array();
-
-		if (isset($this->request->post['selected'])) {
-			$orders = $this->request->post['selected'];
-		} elseif (isset($this->request->get['order_id'])) {
-			$orders[] = $this->request->get['order_id'];
-		}
+        $pdf = false;
+        $orders = array();
+        if (isset($this->request->post['selected'])) {
+            $orders = $this->request->post['selected'];
+            $pdf = (isset($this->request->get['pdf'])) ? true : false;
+        } elseif (isset($this->request->get['order_id'])) {
+            $orders[] = $this->request->get['order_id'];
+            $pdf = (isset($this->request->get['pdf'])) ? true : false;
+        }
 
 		foreach ($orders as $order_id) {
 			$order_info = $this->model_sale_order->getOrder($order_id);
@@ -2366,7 +2371,15 @@ class ControllerSaleOrder extends Controller {
 
 				$shipping_address = str_replace(array("\r\n", "\r", "\n"), '<br />', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '<br />', trim(str_replace($find, $replace, $format))));
 
-				$product_data = array();
+                $customer_name = $order_info['shipping_firstname'] . ' ' .  $order_info['shipping_lastname'];
+
+                $customer_address =
+                    (!empty($order_info['shipping_address_1'])? $order_info['shipping_address_1'].' ' : '') .
+                    (!empty($order_info['shipping_address_2'])? $order_info['shipping_address_2'].', ' : '') .
+                    (!empty($order_info['shipping_city'])? $order_info['shipping_city'].', ' : '') .
+                    (!empty($order_info['shipping_zone'])? $order_info['shipping_zone'] : '');
+
+                $product_data = array();
 
 				$products = $this->model_sale_order->getOrderProducts($order_id);
 
@@ -2420,7 +2433,9 @@ class ControllerSaleOrder extends Controller {
 					);				
 				}
 
-				$data['orders'][] = array(
+                $pm = explode('<br/>', $order_info['payment_method']);
+
+                $data['orders'][] = array(
 					'order_id'	         => $order_id,
 					'invoice_no'         => $invoice_no,
 					'date_added'         => date($this->language->get('date_format_short'), strtotime($order_info['date_added'])),
@@ -2435,17 +2450,26 @@ class ControllerSaleOrder extends Controller {
 					'shipping_address'   => $shipping_address,
 					'shipping_method'    => $order_info['shipping_method'],
 					'payment_address'    => $payment_address,
-					'payment_method'     => $order_info['payment_method'],
+                    'customer_name'      => $customer_name,
+                    'customer_address'   => $customer_address,
+					'payment_method'     => $pm[0],
 					'product'            => $product_data,
 					'voucher'            => $voucher_data,
 					'total'              => $total_data,
 					'comment'            => nl2br($order_info['comment'])
 				);
+
+
 			}
 		}
 
-		$this->response->setOutput($this->load->view('sale/order_invoice.tpl', $data));
-	}
+        if ($pdf){
+            require_once(DIR_SYSTEM . 'helper/pdf.php');
+            $this->response->setOutput(pdf($this->load->view('sale/order_invoice_pdf.tpl', $data), $this->data['orders']));
+        }else{
+            $this->response->setOutput($this->load->view('sale/order_invoice.tpl', $data));
+        }
+    }
 
 	public function picklist() {
 		$this->load->language('sale/order');
@@ -2498,8 +2522,7 @@ class ControllerSaleOrder extends Controller {
 
 		$data['orders'] = array();
 
-		$orders = array();
-
+        $orders = array();
 		if (isset($this->request->post['selected'])) {
 			$orders = $this->request->post['selected'];
 		} elseif (isset($this->request->get['order_id'])) {

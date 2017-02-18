@@ -13,7 +13,7 @@
         </div>
         <div class="col-sm-7">
           <div class="input-group">
-            <input type="text" name="search" value="<?php echo $filter_name; ?>" placeholder="<?php echo $entry_search; ?>" class="form-control">
+            <input type="text" name="search" value="<?php echo $filter_name; ?>"  class="form-control">
             <span class="input-group-btn">
             <button type="button" title="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary"><i class="fa fa-search"></i></button>
             </span></div>
@@ -160,7 +160,7 @@ $('#button-folder').popover({
 	title: '<?php echo $entry_folder; ?>',
 	content: function() {
 		html  = '<div class="input-group">';
-		html += '  <input type="text" name="folder" value="" placeholder="<?php echo $entry_folder; ?>" class="form-control">';
+		html += '  <input type="text" name="folder" value=""  class="form-control">';
 		html += '  <span class="input-group-btn"><button type="button" title="<?php echo $button_folder; ?>" id="button-create" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></span>';
 		html += '</div>';
 		

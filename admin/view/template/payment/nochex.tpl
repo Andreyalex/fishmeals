@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="nochex_email" value="<?php echo $nochex_email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" />
+            <input type="text" name="nochex_email" value="<?php echo $nochex_email; ?>"  id="input-email" />
             <?php if ($error_email) { ?>
             <div class="text-danger"><?php echo $error_email; ?></div>
             <?php } ?>
@@ -48,7 +48,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-merchant"><?php echo $entry_merchant; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="nochex_merchant" value="<?php echo $nochex_merchant; ?>" placeholder="<?php echo $entry_merchant; ?>" id="input-merchant" class="form-control" />
+            <input type="text" name="nochex_merchant" value="<?php echo $nochex_merchant; ?>"  id="input-merchant" class="form-control" />
             <?php if ($error_merchant) { ?>
             <div class="text-danger"><?php echo $error_merchant; ?></div>
             <?php } ?>
@@ -103,7 +103,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="nochex_total" value="<?php echo $nochex_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="nochex_total" value="<?php echo $nochex_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
@@ -152,7 +152,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="nochex_sort_order" value="<?php echo $nochex_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="nochex_sort_order" value="<?php echo $nochex_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

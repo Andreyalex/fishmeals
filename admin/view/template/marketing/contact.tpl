@@ -52,7 +52,7 @@
         <div class="form-group to" id="to-customer">
           <label class="col-sm-2 control-label" for="input-customer"><?php echo $entry_customer; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="customers" value="" placeholder="<?php echo $entry_customer; ?>" id="input-customer" class="form-control" />
+            <input type="text" name="customers" value=""  id="input-customer" class="form-control" />
             <span class="help-block"><?php echo $help_customer; ?></span>
             <div id="customer" class="well well-sm" style="height: 150px; overflow: auto;"></div>
           </div>
@@ -60,7 +60,7 @@
         <div class="form-group to" id="to-affiliate">
           <label class="col-sm-2 control-label" for="input-affiliate"><?php echo $entry_affiliate; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="affiliates" value="" placeholder="<?php echo $entry_affiliate; ?>" id="input-affiliate" class="form-control" />
+            <input type="text" name="affiliates" value=""  id="input-affiliate" class="form-control" />
             <span class="help-block"><?php echo $help_affiliate; ?></span>
             <div id="affiliate" class="well well-sm" style="height: 150px; overflow: auto;"></div>
           </div>
@@ -68,7 +68,7 @@
         <div class="form-group to" id="to-product">
           <label class="col-sm-2 control-label" for="input-product"><?php echo $entry_product; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="products" value="" placeholder="<?php echo $entry_product; ?>" id="input-product" class="form-control" />
+            <input type="text" name="products" value=""  id="input-product" class="form-control" />
             <span class="help-block"><?php echo $help_product; ?></span>
             <div id="product" class="well well-sm" style="height: 150px; overflow: auto;"></div>
           </div>
@@ -76,13 +76,13 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-subject"><?php echo $entry_subject; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="subject" value="" placeholder="<?php echo $entry_subject; ?>" id="input-subject" class="form-control" />
+            <input type="text" name="subject" value=""  id="input-subject" class="form-control" />
           </div>
         </div>
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-message"><?php echo $entry_message; ?></label>
           <div class="col-sm-10">
-            <textarea name="message" placeholder="<?php echo $entry_message; ?>" id="input-message" class="form-control"></textarea>
+            <textarea name="message"  id="input-message" class="form-control"></textarea>
           </div>
         </div>
       </form>

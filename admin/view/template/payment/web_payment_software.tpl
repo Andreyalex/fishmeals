@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-login"><?php echo $entry_login; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="web_payment_software_merchant_name" value="<?php echo $web_payment_software_merchant_name; ?>" placeholder="<?php echo $entry_login; ?>" id="input-login" class="form-control" />
+            <input type="text" name="web_payment_software_merchant_name" value="<?php echo $web_payment_software_merchant_name; ?>"  id="input-login" class="form-control" />
             <?php if ($error_login) { ?>
             <div class="text-danger"><?php echo $error_login; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-key"><?php echo $entry_key; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="web_payment_software_merchant_key" value="<?php echo $web_payment_software_merchant_key; ?>" placeholder="<?php echo $entry_key; ?>" id="input-key" class="form-control" />
+            <input type="text" name="web_payment_software_merchant_key" value="<?php echo $web_payment_software_merchant_key; ?>"  id="input-key" class="form-control" />
             <?php if ($error_key) { ?>
             <div class="text-danger"><?php echo $error_key; ?></div>
             <?php } ?>
@@ -74,7 +74,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="web_payment_software_total" value="<?php echo $web_payment_software_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="web_payment_software_total" value="<?php echo $web_payment_software_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
@@ -123,7 +123,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="web_payment_software_sort_order" value="<?php echo $web_payment_software_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="web_payment_software_sort_order" value="<?php echo $web_payment_software_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

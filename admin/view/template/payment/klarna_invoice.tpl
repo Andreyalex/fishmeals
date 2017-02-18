@@ -41,13 +41,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-merchant<?php echo $country['code']; ?>"><?php echo $entry_merchant; ?></label>
                   <div class="col-sm-10">
-                    <input type="text" name="klarna_invoice[<?php echo $country['code']; ?>][merchant]" value="<?php echo isset($klarna_invoice[$country['code']]) ? $klarna_invoice[$country['code']]['merchant'] : ''; ?>" placeholder="<?php echo $entry_merchant; ?>" id="input-merchant<?php echo $country['code']; ?>" class="form-control" />
+                    <input type="text" name="klarna_invoice[<?php echo $country['code']; ?>][merchant]" value="<?php echo isset($klarna_invoice[$country['code']]) ? $klarna_invoice[$country['code']]['merchant'] : ''; ?>"  id="input-merchant<?php echo $country['code']; ?>" class="form-control" />
                     <span class="help-block"><?php echo $help_merchant; ?></span> </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-secret<?php echo $country['code']; ?>"><?php echo $entry_secret; ?></label>
                   <div class="col-sm-10">
-                    <input type="text" name="klarna_invoice[<?php echo $country['code']; ?>][secret]" value="<?php echo isset($klarna_invoice[$country['code']]) ? $klarna_invoice[$country['code']]['secret'] : ''; ?>" placeholder="<?php echo $entry_secret; ?>" id="input-secret<?php echo $country['code']; ?>" class="form-control" />
+                    <input type="text" name="klarna_invoice[<?php echo $country['code']; ?>][secret]" value="<?php echo isset($klarna_invoice[$country['code']]) ? $klarna_invoice[$country['code']]['secret'] : ''; ?>"  id="input-secret<?php echo $country['code']; ?>" class="form-control" />
                     <span class="help-block"><?php echo $help_secret; ?></span> </div>
                 </div>
                 <div class="form-group">
@@ -70,7 +70,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-total<?php echo $country['code']; ?>"><?php echo $entry_total; ?></label>
                   <div class="col-sm-10">
-                    <input type="text" name="klarna_invoice[<?php echo $country['code']; ?>][total]" value="<?php echo isset($klarna_invoice[$country['code']]) ? $klarna_invoice[$country['code']]['total'] : ''; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total<?php echo $country['code']; ?>" class="form-control" />
+                    <input type="text" name="klarna_invoice[<?php echo $country['code']; ?>][total]" value="<?php echo isset($klarna_invoice[$country['code']]) ? $klarna_invoice[$country['code']]['total'] : ''; ?>"  id="input-total<?php echo $country['code']; ?>" class="form-control" />
                     <span class="help-block"><?php echo $help_total; ?></span> </div>
                 </div>
                 <div class="form-group">
@@ -133,7 +133,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-sort-order<?php echo $country['code']; ?>"><?php echo $entry_sort_order ?></label>
                   <div class="col-sm-10">
-                    <input type="text" name="klarna_invoice[<?php echo $country['code']; ?>][sort_order]" value="<?php echo isset($klarna_invoice[$country['code']]) ? $klarna_invoice[$country['code']]['sort_order'] : ''; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order<?php echo $country['code']; ?>" class="form-control" />
+                    <input type="text" name="klarna_invoice[<?php echo $country['code']; ?>][sort_order]" value="<?php echo isset($klarna_invoice[$country['code']]) ? $klarna_invoice[$country['code']]['sort_order'] : ''; ?>"  id="input-sort-order<?php echo $country['code']; ?>" class="form-control" />
                   </div>
                 </div>
               </div>

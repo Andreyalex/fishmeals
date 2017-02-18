@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-auth-id"><?php echo $entry_auth_id; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="perpetual_payments_auth_id" value="<?php echo $perpetual_payments_auth_id; ?>" placeholder="<?php echo $entry_auth_id; ?>" id="input-auth-id" class="form-control" />
+            <input type="text" name="perpetual_payments_auth_id" value="<?php echo $perpetual_payments_auth_id; ?>"  id="input-auth-id" class="form-control" />
             <?php if ($error_auth_id) { ?>
             <div class="text-danger"><?php echo $error_auth_id; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-auth-pass"><?php echo $entry_auth_pass; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="perpetual_payments_auth_pass" value="<?php echo $perpetual_payments_auth_pass; ?>" placeholder="<?php echo $entry_auth_pass; ?>" id="input-auth-pass" class="form-control" />
+            <input type="text" name="perpetual_payments_auth_pass" value="<?php echo $perpetual_payments_auth_pass; ?>"  id="input-auth-pass" class="form-control" />
             <?php if ($error_auth_pass) { ?>
             <div class="text-danger"><?php echo $error_auth_pass; ?></div>
             <?php } ?>
@@ -63,7 +63,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="perpetual_payments_total" value="<?php echo $perpetual_payments_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="perpetual_payments_total" value="<?php echo $perpetual_payments_total; ?>"  id="input-total" class="form-control" />
           </div>
         </div>
         <div class="form-group">
@@ -112,7 +112,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="perpetual_payments_sort_order" value="<?php echo $perpetual_payments_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="perpetual_payments_sort_order" value="<?php echo $perpetual_payments_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

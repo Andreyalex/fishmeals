@@ -28,11 +28,11 @@
           <div class="col-sm-6">
             <div class="form-group">
               <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
-              <input type="text" name="filter_name" value="<?php echo $filter_name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
+              <input type="text" name="filter_name" value="<?php echo $filter_name; ?>"  id="input-name" class="form-control" />
             </div>
             <div class="form-group">
               <label class="control-label" for="input-code"><?php echo $entry_code; ?></label>
-              <input type="text" name="filter_code" value="<?php echo $filter_code; ?>" placeholder="<?php echo $entry_code; ?>" id="input-code" class="form-control" />
+              <input type="text" name="filter_code" value="<?php echo $filter_code; ?>"  id="input-code" class="form-control" />
             </div>
           </div>
           <div class="col-sm-6">

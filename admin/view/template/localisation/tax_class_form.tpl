@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-title"><?php echo $entry_title; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="title" value="<?php echo $title; ?>" placeholder="<?php echo $entry_title; ?>" id="input-title" class="form-control" />
+            <input type="text" name="title" value="<?php echo $title; ?>"  id="input-title" class="form-control" />
             <?php if ($error_title) { ?>
             <div class="text-danger"><?php echo $error_title; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-description"><?php echo $entry_description; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="description" value="<?php echo $description; ?>" placeholder="<?php echo $entry_description; ?>" id="input-description" class="form-control" />
+            <input type="text" name="description" value="<?php echo $description; ?>"  id="input-description" class="form-control" />
             <?php if ($error_description) { ?>
             <div class="text-danger"><?php echo $error_description; ?></div>
             <?php } ?>
@@ -76,7 +76,7 @@
                   <option value="store"><?php echo $text_store; ?></option>
                   <?php } ?>
                 </select></td>
-              <td class="text-left"><input type="text" name="tax_rule[<?php echo $tax_rule_row; ?>][priority]" value="<?php echo $tax_rule['priority']; ?>" placeholder="<?php echo $entry_priority; ?>" class="form-control" /></td>
+              <td class="text-left"><input type="text" name="tax_rule[<?php echo $tax_rule_row; ?>][priority]" value="<?php echo $tax_rule['priority']; ?>"  class="form-control" /></td>
               <td class="text-left"><button type="button" onclick="$('#tax-rule-row<?php echo $tax_rule_row; ?>').remove();" class="btn btn-danger"><i class="fa fa-minus-circle"></i> <?php echo $button_remove; ?></button></td>
             </tr>
             <?php $tax_rule_row++; ?>
@@ -108,7 +108,7 @@ function addRule() {
     html += '    <option value="payment"><?php echo $text_payment; ?></option>';
     html += '    <option value="store"><?php echo $text_store; ?></option>';
     html += '  </select></td>';
-	html += '  <td class="text-left"><input type="text" name="tax_rule[' + tax_rule_row + '][priority]" value="" placeholder="<?php echo $entry_priority; ?>" class="form-control" /></td>';
+	html += '  <td class="text-left"><input type="text" name="tax_rule[' + tax_rule_row + '][priority]" value=""  class="form-control" /></td>';
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#tax-rule-row' + tax_rule_row + '\').remove();" class="btn btn-danger"><i class="fa fa-minus-circle"></i> <?php echo $button_remove; ?></button></td>';
 	html += '</tr>';
 	

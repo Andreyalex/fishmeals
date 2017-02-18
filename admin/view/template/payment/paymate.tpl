@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-username"><?php echo $entry_username; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="paymate_username" value="<?php echo $paymate_username; ?>" placeholder="<?php echo $entry_username; ?>" id="input-username" class="form-control" />
+            <input type="text" name="paymate_username" value="<?php echo $paymate_username; ?>"  id="input-username" class="form-control" />
             <?php if ($error_username) { ?>
             <div class="text-danger"><?php echo $error_username; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-password"><?php echo $entry_password; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="paymate_password" value="<?php echo $paymate_password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+            <input type="text" name="paymate_password" value="<?php echo $paymate_password; ?>"  id="input-password" class="form-control" />
             <span class="help-block"><?php echo $help_password; ?></span>
             <?php if ($error_password) { ?>
             <div class="text-danger"><?php echo $error_password; ?></div>
@@ -64,7 +64,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="paymate_total" value="<?php echo $paymate_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+            <input type="text" name="paymate_total" value="<?php echo $paymate_total; ?>"  id="input-total" class="form-control" />
             <span class="help-block"><?php echo $help_total; ?></span> </div>
         </div>
         <div class="form-group">
@@ -113,7 +113,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="paymate_sort_order" value="<?php echo $paymate_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="paymate_sort_order" value="<?php echo $paymate_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

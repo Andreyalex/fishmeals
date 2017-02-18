@@ -31,11 +31,11 @@
           <div class="col-sm-4">
             <div class="form-group">
               <label class="control-label" for="input-order-id"><?php echo $entry_order_id; ?></label>
-              <input type="text" name="filter_order_id" value="<?php echo $filter_order_id; ?>" placeholder="<?php echo $entry_order_id; ?>" id="input-order-id" class="form-control" />
+              <input type="text" name="filter_order_id" value="<?php echo $filter_order_id; ?>"  id="input-order-id" class="form-control" />
             </div>
             <div class="form-group">
               <label class="control-label" for="input-customer"><?php echo $entry_customer; ?></label>
-              <input type="text" name="filter_customer" value="<?php echo $filter_customer; ?>" placeholder="<?php echo $entry_customer; ?>" id="input-customer" class="form-control" />
+              <input type="text" name="filter_customer" value="<?php echo $filter_customer; ?>"  id="input-customer" class="form-control" />
             </div>
           </div>
           <div class="col-sm-4">
@@ -59,7 +59,7 @@
             </div>
             <div class="form-group">
               <label class="control-label" for="input-total"><?php echo $entry_total; ?></label>
-              <input type="text" name="filter_total" value="<?php echo $filter_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control" />
+              <input type="text" name="filter_total" value="<?php echo $filter_total; ?>"  id="input-total" class="form-control" />
             </div>
           </div>
           <div class="col-sm-4">

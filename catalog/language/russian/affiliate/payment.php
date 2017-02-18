@@ -1,7 +1,6 @@
 <?php
-// Heading
+// Heading 
 $_['heading_title']             = 'Способ оплаты';
-
 // Text
 $_['text_account']              = 'Кабинет Партнера';
 $_['text_payment']              = 'Оплата';
@@ -9,7 +8,7 @@ $_['text_your_payment']         = 'Ваши перечисления';
 $_['text_your_password']        = 'Пароль';
 $_['text_cheque']               = 'Чек';
 $_['text_paypal']               = 'PayPal';
-$_['text_bank']                 = 'Банковский перевод';
+$_['text_bank']                 = 'Безналичный (Предоплата на счет Приват Банка)';
 $_['text_success']              = 'Учетные данные Партнера успешно обновлены.';
 
 // Entry
@@ -22,4 +21,3 @@ $_['entry_bank_branch_number']  = 'ABA/BSB номер (номер отделен
 $_['entry_bank_swift_code']     = 'SWIFT код:';
 $_['entry_bank_account_name']   = 'Название счёта:';
 $_['entry_bank_account_number'] = 'Номер счёта:';
-?>

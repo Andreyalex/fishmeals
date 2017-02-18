@@ -1,7 +1,6 @@
 <?php
 // Heading
-$_['heading_title']    = 'Карта сайта';
-
+$_['heading_title']    = 'Карта сайта'; 
 // Text
 $_['text_special']     = 'Акции';
 $_['text_account']     = 'Личный кабинет';
@@ -15,4 +14,3 @@ $_['text_checkout']    = 'Оформление заказа';
 $_['text_search']      = 'Поиск';
 $_['text_information'] = 'Информация';
 $_['text_contact']     = 'Наши контакты';
-?>

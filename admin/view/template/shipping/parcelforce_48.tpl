@@ -22,13 +22,13 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-rate"><?php echo $entry_rate; ?></label>
           <div class="col-sm-10">
-            <textarea name="parcelforce_48_rate" rows="5" placeholder="<?php echo $entry_rate; ?>" id="input-rate" class="form-control"><?php echo $parcelforce_48_rate; ?></textarea>
+            <textarea name="parcelforce_48_rate" rows="5"  id="input-rate" class="form-control"><?php echo $parcelforce_48_rate; ?></textarea>
             <span class="help-block"><?php echo $help_rate; ?></span> </div>
         </div>
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-insurance"><?php echo $entry_insurance; ?></label>
           <div class="col-sm-10">
-            <textarea name="parcelforce_48_insurance" rows="5" placeholder="<?php echo $entry_insurance; ?>" id="input-insurance" class="form-control"><?php echo $parcelforce_48_insurance; ?></textarea>
+            <textarea name="parcelforce_48_insurance" rows="5"  id="input-insurance" class="form-control"><?php echo $parcelforce_48_insurance; ?></textarea>
             <span class="help-block"><?php echo $help_insurance; ?></span> </div>
         </div>
         <div class="form-group">
@@ -147,7 +147,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="parcelforce_48_sort_order" value="<?php echo $parcelforce_48_sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
+            <input type="text" name="parcelforce_48_sort_order" value="<?php echo $parcelforce_48_sort_order; ?>"  id="input-sort-order" class="form-control" />
           </div>
         </div>
       </form>

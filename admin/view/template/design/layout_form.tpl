@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="name" value="<?php echo $name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
+            <input type="text" name="name" value="<?php echo $name; ?>"  id="input-name" class="form-control" />
             <?php if ($error_name) { ?>
             <div class="text-danger"><?php echo $error_name; ?></div>
             <?php } ?>
@@ -50,7 +50,7 @@
                   <?php } ?>
                   <?php } ?>
                 </select></td>
-              <td class="text-left"><input type="text" name="layout_route[<?php echo $route_row; ?>][route]" value="<?php echo $layout_route['route']; ?>" placeholder="<?php echo $entry_route; ?>" class="form-control" /></td>
+              <td class="text-left"><input type="text" name="layout_route[<?php echo $route_row; ?>][route]" value="<?php echo $layout_route['route']; ?>"  class="form-control" /></td>
               <td class="text-left"><button type="button" onclick="$('#route-row<?php echo $route_row; ?>').remove();" class="btn btn-danger"><i class="fa fa-minus-circle"></i> <?php echo $button_remove; ?></button></td>
             </tr>
             <?php $route_row++; ?>
@@ -78,7 +78,7 @@ function addRoute() {
 	html += '<option value="<?php echo $store['store_id']; ?>"><?php echo addslashes($store['name']); ?></option>';
 	<?php } ?>   
 	html += '  </select></td>';
-	html += '  <td class="text-left"><input type="text" name="layout_route[' + route_row + '][route]" value="" placeholder="<?php echo $entry_route; ?>" class="form-control" /></td>';
+	html += '  <td class="text-left"><input type="text" name="layout_route[' + route_row + '][route]" value=""  class="form-control" /></td>';
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#route-row' + route_row + '\').remove();" class="btn btn-danger"><i class="fa fa-minus-circle"></i> <?php echo $button_remove; ?></button></td>';
 	html += '</tr>';
 	

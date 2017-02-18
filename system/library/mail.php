@@ -155,14 +155,14 @@ class Mail {
 				mail($to, '=?UTF-8?B?' . base64_encode($this->subject) . '?=', $message, $header);
 			}
 		} elseif ($this->protocol == 'smtp') {
-			$handle = fsockopen($this->hostname, $this->port, $errno, $errstr, $this->timeout);
+			$handle = fsockopen($this->smtp_hostname, $this->smtp_port, $errno, $errstr, $this->smtp_timeout);
 
 			if (!$handle) {
 				error_log('Error: ' . $errstr . ' (' . $errno . ')');
 				exit();
 			} else {
 				if (substr(PHP_OS, 0, 3) != 'WIN') {
-					socket_set_timeout($handle, $this->timeout, 0);
+					socket_set_timeout($handle, $this->smtp_timeout, 0);
 				}
 
 				while ($line = fgets($handle, 515)) {
@@ -171,7 +171,7 @@ class Mail {
 					}
 				}
 
-				if (substr($this->hostname, 0, 3) == 'tls') {
+				if (substr($this->smtp_hostname, 0, 3) == 'tls') {
 					fputs($handle, 'STARTTLS' . "\r\n");
 					
 					$reply = '';
@@ -190,7 +190,7 @@ class Mail {
 					}
 				}
 
-				if (!empty($this->username)  && !empty($this->password)) {
+				if (!empty($this->smtp_username)  && !empty($this->smtp_password)) {
 					fputs($handle, 'EHLO ' . getenv('SERVER_NAME') . "\r\n");
 
 					$reply = '';
@@ -225,7 +225,7 @@ class Mail {
 						exit();
 					}
 
-					fputs($handle, base64_encode($this->username) . "\r\n");
+					fputs($handle, base64_encode($this->smtp_username) . "\r\n");
 
 					$reply = '';
 
@@ -242,7 +242,7 @@ class Mail {
 						exit();
 					}
 
-					fputs($handle, base64_encode($this->password) . "\r\n");
+					fputs($handle, base64_encode($this->smtp_password) . "\r\n");
 
 					$reply = '';
 

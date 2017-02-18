@@ -22,7 +22,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="name" value="<?php echo $name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
+            <input type="text" name="name" value="<?php echo $name; ?>"  id="input-name" class="form-control" />
             <?php if ($error_name) { ?>
             <div class="text-danger"><?php echo $error_name; ?></div>
             <?php } ?>
@@ -31,7 +31,7 @@
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-address"><?php echo $entry_address; ?></label>
           <div class="col-sm-10">
-            <textarea type="text" name="address" placeholder="<?php echo $entry_address; ?>" rows="5" id="input-address" class="form-control"><?php echo $address; ?></textarea>
+            <textarea type="text" name="address"  rows="5" id="input-address" class="form-control"><?php echo $address; ?></textarea>
             <?php if ($error_address) { ?>
             <div class="text-danger"><?php echo $error_address; ?></div>
             <?php } ?>
@@ -40,13 +40,13 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-geocode"><?php echo $entry_geocode; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="geocode" value="<?php echo $geocode; ?>" placeholder="<?php echo $entry_geocode; ?>" id="input-geocode" class="form-control" />
+            <input type="text" name="geocode" value="<?php echo $geocode; ?>"  id="input-geocode" class="form-control" />
             <span class="help-block"><?php echo $help_geocode; ?></span></div>
         </div>
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_telephone; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
+            <input type="text" name="telephone" value="<?php echo $telephone; ?>"  id="input-telephone" class="form-control" />
             <?php if ($error_telephone) { ?>
             <div class="text-danger"><?php echo $error_telephone; ?></div>
             <?php  } ?>
@@ -55,7 +55,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="fax" value="<?php echo $fax; ?>" placeholder="<?php echo $entry_fax; ?>" id="input-fax" class="form-control" />
+            <input type="text" name="fax" value="<?php echo $fax; ?>"  id="input-fax" class="form-control" />
           </div>
         </div>
         <div class="form-group">
@@ -72,13 +72,13 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-open"><?php echo $entry_open; ?></label>
           <div class="col-sm-10">
-            <textarea name="open" rows="5" placeholder="<?php echo $entry_open; ?>" id="input-open" class="form-control"><?php echo $open; ?></textarea>
+            <textarea name="open" rows="5"  id="input-open" class="form-control"><?php echo $open; ?></textarea>
             <span class="help-block"><?php echo $help_open; ?></span></div>
         </div>
         <div class="form-group">
           <label class="col-sm-2 control-label" for="input-comment"><?php echo $entry_comment; ?></label>
           <div class="col-sm-10">
-            <textarea name="comment" rows="5" placeholder="<?php echo $entry_comment; ?>" id="input-comment" class="form-control"><?php echo $comment; ?></textarea>
+            <textarea name="comment" rows="5"  id="input-comment" class="form-control"><?php echo $comment; ?></textarea>
             <span class="help-block"><?php echo $help_comment; ?></span></div>
         </div>
       </form>

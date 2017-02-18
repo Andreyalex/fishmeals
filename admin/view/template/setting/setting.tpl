@@ -40,7 +40,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_name" value="<?php echo $config_name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
+                <input type="text" name="config_name" value="<?php echo $config_name; ?>"  id="input-name" class="form-control" />
                 <?php if ($error_name) { ?>
                 <div class="text-danger"><?php echo $error_name; ?></div>
                 <?php } ?>
@@ -49,7 +49,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-owner"><?php echo $entry_owner; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_owner" value="<?php echo $config_owner; ?>" placeholder="<?php echo $entry_owner; ?>" id="input-owner" class="form-control" />
+                <input type="text" name="config_owner" value="<?php echo $config_owner; ?>"  id="input-owner" class="form-control" />
                 <?php if ($error_owner) { ?>
                 <div class="text-danger"><?php echo $error_owner; ?></div>
                 <?php } ?>
@@ -58,7 +58,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-address"><?php echo $entry_address; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_address" placeholder="<?php echo $entry_address; ?>" rows="5" id="input-address" class="form-control"><?php echo $config_address; ?></textarea>
+                <textarea name="config_address"  rows="5" id="input-address" class="form-control"><?php echo $config_address; ?></textarea>
                 <?php if ($error_address) { ?>
                 <div class="text-danger"><?php echo $error_address; ?></div>
                 <?php } ?>
@@ -67,13 +67,13 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-geocode"><?php echo $entry_geocode; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_geocode" value="<?php echo $config_geocode; ?>" placeholder="<?php echo $entry_geocode; ?>" id="input-geocode" class="form-control" />
+                <input type="text" name="config_geocode" value="<?php echo $config_geocode; ?>"  id="input-geocode" class="form-control" />
                 <span class="help-block"><?php echo $help_geocode; ?></span></div>
             </div>
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_email" value="<?php echo $config_email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+                <input type="text" name="config_email" value="<?php echo $config_email; ?>"  id="input-email" class="form-control" />
                 <?php if ($error_email) { ?>
                 <div class="text-danger"><?php echo $error_email; ?></div>
                 <?php } ?>
@@ -82,7 +82,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_telephone; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_telephone" value="<?php echo $config_telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
+                <input type="text" name="config_telephone" value="<?php echo $config_telephone; ?>"  id="input-telephone" class="form-control" />
                 <?php if ($error_telephone) { ?>
                 <div class="text-danger"><?php echo $error_telephone; ?></div>
                 <?php } ?>
@@ -91,7 +91,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_fax" value="<?php echo $config_fax; ?>" placeholder="<?php echo $entry_fax; ?>" id="input-fax" class="form-control" />
+                <input type="text" name="config_fax" value="<?php echo $config_fax; ?>"  id="input-fax" class="form-control" />
               </div>
             </div>
             <div class="form-group">
@@ -108,13 +108,19 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-open"><?php echo $entry_open; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_open" rows="5" placeholder="<?php echo $entry_open; ?>" id="input-open" class="form-control"><?php echo $config_open; ?></textarea>
+                <textarea name="config_open" rows="5"  id="input-open" class="form-control"><?php echo $config_open; ?></textarea>
                 <span class="help-block"><?php echo $help_open; ?></span></div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="input-google_verification">Код верификации google</label>
+              <div class="col-sm-10">
+                <input name="config_google_verification" id="input-google_verification" class="form-control" value="<?php echo $config_google_verification; ?>" />
+                <span class="help-block"><?php echo $help_google_verification; ?></span></div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-comment"><?php echo $entry_comment; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_comment" rows="5" placeholder="<?php echo $entry_comment; ?>" id="input-comment" class="form-control"><?php echo $config_comment; ?></textarea>
+                <textarea name="config_comment" rows="5"  id="input-comment" class="form-control"><?php echo $config_comment; ?></textarea>
                 <span class="help-block"><?php echo $help_comment; ?></span></div>
             </div>
             <div class="form-group">
@@ -140,7 +146,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-meta-title"><?php echo $entry_meta_title; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_meta_title" value="<?php echo $config_meta_title; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title" class="form-control" />
+                <input type="text" name="config_meta_title" value="<?php echo $config_meta_title; ?>"  id="input-meta-title" class="form-control" />
                 <?php if ($error_meta_title) { ?>
                 <div class="text-danger"><?php echo $error_meta_title; ?></div>
                 <?php } ?>
@@ -149,7 +155,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-meta-description"><?php echo $entry_meta_description; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_meta_description" rows="5" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description" class="form-control"><?php echo $config_meta_description; ?></textarea>
+                <textarea name="config_meta_description" rows="5"  id="input-meta-description" class="form-control"><?php echo $config_meta_description; ?></textarea>
               </div>
             </div>
             <div class="form-group">
@@ -327,7 +333,7 @@
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-catalog-limit"><?php echo $entry_product_limit; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_product_limit" value="<?php echo $config_product_limit; ?>" placeholder="<?php echo $entry_product_limit; ?>" id="input-catalog-limit" class="form-control" />
+                  <input type="text" name="config_product_limit" value="<?php echo $config_product_limit; ?>"  id="input-catalog-limit" class="form-control" />
                   <span class="help-block"><?php echo $help_product_limit; ?></span>
                   <?php if ($error_product_limit) { ?>
                   <div class="text-danger"><?php echo $error_product_limit; ?></div>
@@ -337,7 +343,7 @@
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-list-description-limit"><?php echo $entry_product_description_length; ?> </label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_product_description_length" value="<?php echo $config_product_description_length; ?>" placeholder="<?php echo $entry_product_description_length; ?>" id="input-list-description-limit" class="form-control" />
+                  <input type="text" name="config_product_description_length" value="<?php echo $config_product_description_length; ?>"  id="input-list-description-limit" class="form-control" />
                   <span class="help-block"><?php echo $help_product_description_length; ?></span>
                   <?php if ($error_product_description_length) { ?>
                   <div class="text-danger"><?php echo $error_product_description_length; ?></div>
@@ -347,7 +353,7 @@
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-admin-limit"><?php echo $entry_limit_admin; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_limit_admin" value="<?php echo $config_limit_admin; ?>" placeholder="<?php echo $entry_limit_admin; ?>" id="input-admin-limit" class="form-control" />
+                  <input type="text" name="config_limit_admin" value="<?php echo $config_limit_admin; ?>"  id="input-admin-limit" class="form-control" />
                   <span class="help-block"><?php echo $help_limit_admin; ?></span>
                   <?php if ($error_limit_admin) { ?>
                   <div class="text-danger"><?php echo $error_limit_admin; ?></div>
@@ -432,7 +438,7 @@
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-voucher-min"><?php echo $entry_voucher_min; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_voucher_min" value="<?php echo $config_voucher_min; ?>" placeholder="<?php echo $entry_voucher_min; ?>" id="input-voucher-min" class="form-control" />
+                  <input type="text" name="config_voucher_min" value="<?php echo $config_voucher_min; ?>"  id="input-voucher-min" class="form-control" />
                   <span class="help-block"><?php echo $help_voucher_min; ?></span>
                   <?php if ($error_voucher_min) { ?>
                   <div class="text-danger"><?php echo $error_voucher_min; ?></div>
@@ -442,7 +448,7 @@
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-voucher-max"><?php echo $entry_voucher_max; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_voucher_max" value="<?php echo $config_voucher_max; ?>" placeholder="<?php echo $entry_voucher_max; ?>" id="input-voucher-max" class="form-control" />
+                  <input type="text" name="config_voucher_max" value="<?php echo $config_voucher_max; ?>"  id="input-voucher-max" class="form-control" />
                   <span class="help-block"><?php echo $help_voucher_max; ?></span>
                   <?php if ($error_voucher_max) { ?>
                   <div class="text-danger"><?php echo $error_voucher_max; ?></div>
@@ -701,13 +707,13 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-order-edit"><?php echo $entry_order_edit; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_order_edit" value="<?php echo $config_order_edit; ?>" placeholder="<?php echo $entry_order_edit; ?>" id="input-order-edit" class="form-control" />
+                  <input type="text" name="config_order_edit" value="<?php echo $config_order_edit; ?>"  id="input-order-edit" class="form-control" />
                   <span class="help-block"><?php echo $help_order_edit; ?></span> </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-invoice-prefix"><?php echo $entry_invoice_prefix; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_invoice_prefix" value="<?php echo $config_invoice_prefix; ?>" placeholder="<?php echo $entry_invoice_prefix; ?>" id="input-invoice-prefix" class="form-control" />
+                  <input type="text" name="config_invoice_prefix" value="<?php echo $config_invoice_prefix; ?>"  id="input-invoice-prefix" class="form-control" />
                   <span class="help-block"><?php echo $help_invoice_prefix; ?></span> </div>
               </div>
               <div class="form-group">
@@ -899,7 +905,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-affiliate-commission"><?php echo $entry_affiliate_commission; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_affiliate_commission" value="<?php echo $config_affiliate_commission; ?>" placeholder="<?php echo $entry_affiliate_commission; ?>" id="input-affiliate-commission" class="form-control" />
+                  <input type="text" name="config_affiliate_commission" value="<?php echo $config_affiliate_commission; ?>"  id="input-affiliate-commission" class="form-control" />
                   <span class="help-block"><?php echo $help_affiliate_commission; ?></span> </div>
               </div>
               <div class="form-group">
@@ -1002,10 +1008,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_category_width" value="<?php echo $config_image_category_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-category-width" class="form-control" />
+                    <input type="text" name="config_image_category_width" value="<?php echo $config_image_category_width; ?>"  id="input-image-category-width" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_category_height" value="<?php echo $config_image_category_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_category_height" value="<?php echo $config_image_category_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_category) { ?>
@@ -1018,10 +1024,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_thumb_width" value="<?php echo $config_image_thumb_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-thumb-width" class="form-control" />
+                    <input type="text" name="config_image_thumb_width" value="<?php echo $config_image_thumb_width; ?>"  id="input-image-thumb-width" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_thumb_height" value="<?php echo $config_image_thumb_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_thumb_height" value="<?php echo $config_image_thumb_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_thumb) { ?>
@@ -1034,10 +1040,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_popup_width" value="<?php echo $config_image_popup_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-popup-width" class="form-control" />
+                    <input type="text" name="config_image_popup_width" value="<?php echo $config_image_popup_width; ?>"  id="input-image-popup-width" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_popup_height" value="<?php echo $config_image_popup_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_popup_height" value="<?php echo $config_image_popup_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_popup) { ?>
@@ -1050,10 +1056,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_product_width" value="<?php echo $config_image_product_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-product-width" class="form-control" />
+                    <input type="text" name="config_image_product_width" value="<?php echo $config_image_product_width; ?>"  id="input-image-product-width" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_product_height" value="<?php echo $config_image_product_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_product_height" value="<?php echo $config_image_product_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_product) { ?>
@@ -1066,10 +1072,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_additional_width" value="<?php echo $config_image_additional_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-additional-width" class="form-control" />
+                    <input type="text" name="config_image_additional_width" value="<?php echo $config_image_additional_width; ?>"  id="input-image-additional-width" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_additional_height" value="<?php echo $config_image_additional_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_additional_height" value="<?php echo $config_image_additional_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_additional) { ?>
@@ -1082,10 +1088,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_related_width" value="<?php echo $config_image_related_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-related" class="form-control" />
+                    <input type="text" name="config_image_related_width" value="<?php echo $config_image_related_width; ?>"  id="input-image-related" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_related_height" value="<?php echo $config_image_related_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_related_height" value="<?php echo $config_image_related_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_related) { ?>
@@ -1098,10 +1104,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_compare_width" value="<?php echo $config_image_compare_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-compare" class="form-control" />
+                    <input type="text" name="config_image_compare_width" value="<?php echo $config_image_compare_width; ?>"  id="input-image-compare" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_compare_height" value="<?php echo $config_image_compare_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_compare_height" value="<?php echo $config_image_compare_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_compare) { ?>
@@ -1114,10 +1120,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_wishlist_width" value="<?php echo $config_image_wishlist_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-wishlist" class="form-control" />
+                    <input type="text" name="config_image_wishlist_width" value="<?php echo $config_image_wishlist_width; ?>"  id="input-image-wishlist" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_wishlist_height" value="<?php echo $config_image_wishlist_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_wishlist_height" value="<?php echo $config_image_wishlist_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_wishlist) { ?>
@@ -1130,10 +1136,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_cart_width" value="<?php echo $config_image_cart_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-cart" class="form-control" />
+                    <input type="text" name="config_image_cart_width" value="<?php echo $config_image_cart_width; ?>"  id="input-image-cart" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_cart_height" value="<?php echo $config_image_cart_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_cart_height" value="<?php echo $config_image_cart_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_cart) { ?>
@@ -1146,10 +1152,10 @@
               <div class="col-sm-10">
                 <div class="row">
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_location_width" value="<?php echo $config_image_location_width; ?>" placeholder="<?php echo $entry_width; ?>" id="input-image-location" class="form-control" />
+                    <input type="text" name="config_image_location_width" value="<?php echo $config_image_location_width; ?>"  id="input-image-location" class="form-control" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="config_image_location_height" value="<?php echo $config_image_location_height; ?>" placeholder="<?php echo $entry_height; ?>" class="form-control" />
+                    <input type="text" name="config_image_location_height" value="<?php echo $config_image_location_height; ?>"  class="form-control" />
                   </div>
                 </div>
                 <?php if ($error_image_location) { ?>
@@ -1162,7 +1168,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-ftp-host"><?php echo $entry_ftp_hostname; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_ftp_hostname" value="<?php echo $config_ftp_hostname; ?>" placeholder="<?php echo $entry_ftp_hostname; ?>" id="input-ftp-host" class="form-control" />
+                <input type="text" name="config_ftp_hostname" value="<?php echo $config_ftp_hostname; ?>"  id="input-ftp-host" class="form-control" />
                 <?php if ($error_ftp_hostname) { ?>
                 <div class="text-danger"><?php echo $error_ftp_hostname; ?></div>
                 <?php } ?>
@@ -1171,7 +1177,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-ftp-port"><?php echo $entry_ftp_port; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_ftp_port" value="<?php echo $config_ftp_port; ?>" placeholder="<?php echo $entry_ftp_port; ?>" id="input-ftp-port" class="form-control" />
+                <input type="text" name="config_ftp_port" value="<?php echo $config_ftp_port; ?>"  id="input-ftp-port" class="form-control" />
                 <?php if ($error_ftp_port) { ?>
                 <div class="text-danger"><?php echo $error_ftp_port; ?></div>
                 <?php } ?>
@@ -1180,7 +1186,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-ftp-username"><?php echo $entry_ftp_username; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_ftp_username" value="<?php echo $config_ftp_username; ?>" placeholder="<?php echo $entry_ftp_username; ?>" id="input-ftp-username" class="form-control" />
+                <input type="text" name="config_ftp_username" value="<?php echo $config_ftp_username; ?>"  id="input-ftp-username" class="form-control" />
                 <?php if ($error_ftp_username) { ?>
                 <div class="text-danger"><?php echo $error_ftp_username; ?></div>
                 <?php } ?>
@@ -1189,7 +1195,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-ftp-password"><?php echo $entry_ftp_password; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_ftp_password" value="<?php echo $config_ftp_password; ?>" placeholder="<?php echo $entry_ftp_password; ?>" id="input-ftp-password" class="form-control" />
+                <input type="text" name="config_ftp_password" value="<?php echo $config_ftp_password; ?>"  id="input-ftp-password" class="form-control" />
                 <?php if ($error_ftp_password) { ?>
                 <div class="text-danger"><?php echo $error_ftp_password; ?></div>
                 <?php } ?>
@@ -1198,7 +1204,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-ftp-root"><?php echo $entry_ftp_root; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_ftp_root" value="<?php echo $config_ftp_root; ?>" placeholder="<?php echo $entry_ftp_root; ?>" id="input-ftp-root" class="form-control" />
+                <input type="text" name="config_ftp_root" value="<?php echo $config_ftp_root; ?>"  id="input-ftp-root" class="form-control" />
                 <span class="help-block"><?php echo $help_ftp_root; ?></span> </div>
             </div>
             <div class="form-group">
@@ -1246,43 +1252,43 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-mail-parameter"><?php echo $entry_mail_parameter; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_mail[parameter]" value="<?php echo $config_mail_parameter; ?>" placeholder="<?php echo $entry_mail_parameter; ?>" id="input-mail-parameter" class="form-control" />
+                <input type="text" name="config_mail[parameter]" value="<?php echo $config_mail_parameter; ?>"  id="input-mail-parameter" class="form-control" />
                 <span class="help-block"><?php echo $help_mail_parameter; ?></span> </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-smtp-host"><?php echo $entry_smtp_hostname; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_mail[smtp_hostname]" value="<?php echo $config_smtp_hostname; ?>" placeholder="<?php echo $entry_smtp_hostname; ?>" id="input-smtp-host" class="form-control" />
+                <input type="text" name="config_mail[smtp_hostname]" value="<?php echo $config_smtp_hostname; ?>"  id="input-smtp-host" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-smtp-username"><?php echo $entry_smtp_username; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_mail[smtp_username]" value="<?php echo $config_smtp_username; ?>" placeholder="<?php echo $entry_smtp_username; ?>" id="input-smtp-username" class="form-control" />
+                <input type="text" name="config_mail[smtp_username]" value="<?php echo $config_smtp_username; ?>"  id="input-smtp-username" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-smtp-password"><?php echo $entry_smtp_password; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_mail[smtp_password]" value="<?php echo $config_smtp_password; ?>" placeholder="<?php echo $entry_smtp_password; ?>" id="input-smtp-password" class="form-control" />
+                <input type="text" name="config_mail[smtp_password]" value="<?php echo $config_smtp_password; ?>"  id="input-smtp-password" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-smtp-port"><?php echo $entry_smtp_port; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_mail[smtp_port]" value="<?php echo $config_smtp_port; ?>" placeholder="<?php echo $entry_smtp_port; ?>" id="input-smtp-port" class="form-control" />
+                <input type="text" name="config_mail[smtp_port]" value="<?php echo $config_smtp_port; ?>"  id="input-smtp-port" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-smtp-timeout"><?php echo $entry_smtp_timeout; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_mail[smtp_timeout]" value="<?php echo $config_smtp_timeout; ?>" placeholder="<?php echo $entry_smtp_timeout; ?>" id="input-smtp-timeout" class="form-control" />
+                <input type="text" name="config_mail[smtp_timeout]" value="<?php echo $config_smtp_timeout; ?>"  id="input-smtp-timeout" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-alert-email"><?php echo $entry_mail_alert; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_mail_alert" rows="5" placeholder="<?php echo $entry_mail_alert; ?>" id="input-alert-email" class="form-control"><?php echo $config_mail_alert; ?></textarea>
+                <textarea name="config_mail_alert" rows="5"  id="input-alert-email" class="form-control"><?php echo $config_mail_alert; ?></textarea>
                 <span class="help-block"><?php echo $help_mail_alert; ?></span> </div>
             </div>
           </div>
@@ -1313,13 +1319,13 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-fraud-key"><?php echo $entry_fraud_key; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_fraud_key" value="<?php echo $config_fraud_key; ?>" placeholder="<?php echo $entry_fraud_key; ?>" id="input-fraud-key" class="form-control" />
+                <input type="text" name="config_fraud_key" value="<?php echo $config_fraud_key; ?>"  id="input-fraud-key" class="form-control" />
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-fraud-score"><?php echo $entry_fraud_score; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_fraud_score" value="<?php echo $config_fraud_score; ?>" placeholder="<?php echo $entry_fraud_score; ?>" id="input-fraud-score" class="form-control" />
+                <input type="text" name="config_fraud_score" value="<?php echo $config_fraud_score; ?>"  id="input-fraud-score" class="form-control" />
                 <span class="help-block"><?php echo $help_fraud_score; ?></span> </div>
             </div>
             <div class="form-group">
@@ -1387,7 +1393,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-robots"><?php echo $entry_robots; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_robots" rows="5" placeholder="<?php echo $entry_robots; ?>" id="input-robots" class="form-control"><?php echo $config_robots; ?></textarea>
+                <textarea name="config_robots" rows="5"  id="input-robots" class="form-control"><?php echo $config_robots; ?></textarea>
                 <span class="help-block"><?php echo $help_robots; ?></span> </div>
             </div>
             <div class="form-group">
@@ -1416,19 +1422,19 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-image-file-size"><?php echo $entry_image_file_size; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_image_file_size" value="<?php echo $config_image_file_size; ?>" placeholder="<?php echo $entry_image_file_size; ?>" id="input-image-file-size" class="form-control" />
+                <input type="text" name="config_image_file_size" value="<?php echo $config_image_file_size; ?>"  id="input-image-file-size" class="form-control" />
                 <span class="help-block"><?php echo $help_image_file_size; ?></span> </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-file-extension-allowed"><?php echo $entry_file_extension_allowed; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_file_extension_allowed" rows="5" placeholder="<?php echo $entry_file_extension_allowed; ?>" id="input-file-extension-allowed" class="form-control"><?php echo $config_file_extension_allowed; ?></textarea>
+                <textarea name="config_file_extension_allowed" rows="5"  id="input-file-extension-allowed" class="form-control"><?php echo $config_file_extension_allowed; ?></textarea>
                 <span class="help-block"><?php echo $help_file_extension_allowed; ?></span> </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-file-mime-allowed"><?php echo $entry_file_mime_allowed; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_file_mime_allowed" cols="60" rows="5" placeholder="<?php echo $entry_file_mime_allowed; ?>" id="input-file-mime-allowed" class="form-control"><?php echo $config_file_mime_allowed; ?></textarea>
+                <textarea name="config_file_mime_allowed" cols="60" rows="5"  id="input-file-mime-allowed" class="form-control"><?php echo $config_file_mime_allowed; ?></textarea>
                 <span class="help-block"><?php echo $help_file_mime_allowed; ?></span> </div>
             </div>
             <div class="form-group">
@@ -1480,7 +1486,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-encryption"><?php echo $entry_encryption; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_encryption" value="<?php echo $config_encryption; ?>" placeholder="<?php echo $entry_encryption; ?>" id="input-encryption" class="form-control" />
+                <input type="text" name="config_encryption" value="<?php echo $config_encryption; ?>"  id="input-encryption" class="form-control" />
                 <span class="help-block"><?php echo $help_encryption; ?></span>
                 <?php if ($error_encryption) { ?>
                 <div class="text-danger"><?php echo $error_encryption; ?></div>
@@ -1490,7 +1496,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-compression"><?php echo $entry_compression; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_compression" value="<?php echo $config_compression; ?>" placeholder="<?php echo $entry_compression; ?>" id="input-compression" class="form-control" />
+                <input type="text" name="config_compression" value="<?php echo $config_compression; ?>"  id="input-compression" class="form-control" />
                 <span class="help-block"><?php echo $help_compression; ?></span></div>
             </div>
             <div class="form-group">
@@ -1542,7 +1548,7 @@
             <div class="form-group required">
               <label class="col-sm-2 control-label" for="input-error-filename"><?php echo $entry_error_filename; ?></label>
               <div class="col-sm-10">
-                <input type="text" name="config_error_filename" value="<?php echo $config_error_filename; ?>" placeholder="<?php echo $entry_error_filename; ?>" id="input-error-filename" class="form-control" />
+                <input type="text" name="config_error_filename" value="<?php echo $config_error_filename; ?>"  id="input-error-filename" class="form-control" />
                 <?php if ($error_error_filename) { ?>
                 <div class="text-danger"><?php echo $error_error_filename; ?></div>
                 <?php } ?>
@@ -1551,7 +1557,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-google-analytics"><?php echo $entry_google_analytics; ?></label>
               <div class="col-sm-10">
-                <textarea name="config_google_analytics" rows="5" placeholder="<?php echo $entry_google_analytics; ?>" id="input-google-analytics" class="form-control"><?php echo $config_google_analytics; ?></textarea>
+                <textarea name="config_google_analytics" rows="5"  id="input-google-analytics" class="form-control"><?php echo $config_google_analytics; ?></textarea>
                 <span class="help-block"><?php echo $help_google_analytics; ?></span> </div>
             </div>
           </div>

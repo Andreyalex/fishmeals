@@ -3,8 +3,8 @@
 $_['heading_title']    = 'Файлы для скачивания';
 
 // Text
-$_['text_success']     = 'Список файлов для скачивания обновлен!';
-$_['text_upload']      = 'Ваш файл успешно загружен!';
+$_['text_success']     = 'Список файлов обновлен';
+$_['text_upload']      = 'Файл загружен';
 
 // Column
 $_['column_name']      = 'Название';
@@ -12,21 +12,22 @@ $_['column_remaining'] = 'Количество разрешенных скачи
 $_['column_action']    = 'Действие';
 
 // Entry
-$_['entry_name']       = 'Название:';
-$_['entry_filename']   = 'Имя файла:Вы можете закачать файл через кнопку выбора файла или по FTP, поместив его
-в папку download и введя информацию ниже.Желательно, чтобы имя файла и маска отличались: это не позволит людям получать
-прямой доступ к файлу, угадав линк.';
+$_['entry_name']       = 'Название загрузки:';
+$_['entry_filename']   = 'Имя файла:<br /><span class="help">Вы можете загрузить файл с помощью кнопки загрузки, либо через FTP, указав детали ниже.<br /><br />It is also recommended that the filename and the mask are different to stop people trying to directly link to your downloads.</span>';
 $_['entry_mask']       = 'Маска:';
-$_['entry_remaining']  = 'Количество разрешенных скачиваний:';
-$_['entry_update']     = 'Обновление для существующих покупателей:Отметьте здесь, чтобы обновить ранее приобретённые версии.';
+$_['entry_remaining']  = 'Разрешено загрузок:';
+$_['entry_update']     = 'Push to Previous Customers:<br /><span class="help">Установите, для того, чтобы проверить купленные ранее версии</span>';
 
 // Error
-$_['error_permission'] = 'У Вас нет прав для изменения списка файлов!';
-$_['error_name']       = 'Название должно быть от 3 до 64 символов!';
-$_['error_upload']     = 'Укажите файл для загрузки!';
-$_['error_filename']   = 'Имя файла должно быть от 3 до 128 символов!';
-$_['error_exists']     = 'Файл не найден!';
-$_['error_mask']       = 'Маска должна быть длиной от 3 до 128 символов!';
-$_['error_filetype']   = 'Недопустимый тип файла!';
-$_['error_product']    = 'Этот файл не может быть удален, поскольку в настоящее время он прикреплен к %s товару(ам)!';
-?>
+$_['error_permission'] = 'У вас нет прав для редактирования загрузок!';
+$_['error_name']       = 'Название должно содержать от 3 до 64 символов!';
+$_['error_upload']     = 'Необходима загрузка!';
+$_['error_filename']   = 'Название файла должно содержать от 3 до 128 символов!';
+$_['error_exists']     = 'Файл не существует!';
+$_['error_mask']       = 'Маска должна содержать от 3 до 128 символов!';
+$_['error_filetype']   = 'Неправильный тип файла!';
+$_['error_product']    = 'Эта загрузка не может быть удалена, так как она связана с %s продуктом(ами)!';
+
+$_['column_date_added'] = 'Дата добавлена';
+$_['help_filename'] = 'You can upload via the upload button or use FTP to upload to the download directory and enter the details below.';
+$_['help_mask'] = 'It is recommended that the filename and the mask are different to stop people trying to directly link to your downloads.';

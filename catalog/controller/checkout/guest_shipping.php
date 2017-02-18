@@ -39,7 +39,7 @@ class ControllerCheckoutGuestShipping extends Controller {
 		}
 		
 		if (isset($this->session->data['shipping_address']['address_1'])) {
-			$data['address_1'] = $this->session->data['shipping_address']['address_1'];			
+			$data['address_1'] = $this->session->data['shipping_address']['address_1'];
 		} else {
 			$data['address_1'] = '';
 		}
@@ -145,9 +145,9 @@ class ControllerCheckoutGuestShipping extends Controller {
 				$json['error']['lastname'] = $this->language->get('error_lastname');
 			}
 			
-			if ((utf8_strlen($this->request->post['address_1']) < 3) || (utf8_strlen($this->request->post['address_1']) > 128)) {
-				$json['error']['address_1'] = $this->language->get('error_address_1');
-			}
+//			if ((utf8_strlen($this->request->post['address_1']) < 3) || (utf8_strlen($this->request->post['address_1']) > 128)) {
+//				$json['error']['address_1'] = $this->language->get('error_address_1');
+//			}
 	
 			if ((utf8_strlen($this->request->post['city']) < 2) || (utf8_strlen($this->request->post['city']) > 128)) {
 				$json['error']['city'] = $this->language->get('error_city');
